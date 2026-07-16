@@ -1,0 +1,37 @@
+{
+  "name": "Rhesi Café & Restaurant",
+  "address": {
+    "street": "Kapellenstraße 1",
+    "addressExtra": "im Rheincenter",
+    "postalCode": "6890",
+    "city": "Lustenau",
+    "country": "Österreich",
+    "full": "Kapellenstraße 1, im Rheincenter, 6890 Lustenau, Österreich",
+    "mapQuery": "Kapellenstraße 1, Rheincenter, 6890 Lustenau, Österreich"
+  },
+  "phone": "+43 5577 86895",
+  "phoneHref": "tel:+435577886895",
+  "email": "info@rhesi-cafe.at",
+  "openingHours": [
+    { "day": "Montag", "hours": "08:30 – 20:00" },
+    { "day": "Dienstag", "hours": "08:30 – 20:00" },
+    { "day": "Mittwoch", "hours": "08:30 – 20:00" },
+    { "day": "Donnerstag", "hours": "08:30 – 20:00" },
+    { "day": "Freitag", "hours": "08:30 – 20:00" },
+    { "day": "Samstag", "hours": "08:00 – 18:00" },
+    { "day": "Sonntag", "hours": "geschlossen" }
+  ],
+  "openingHoursShort": [
+    { "days": "Mo – Fr", "hours": "08:30 – 20:00" },
+    { "days": "Sa", "hours": "08:00 – 18:00" },
+    { "days": "So", "hours": "geschlossen" }
+  ],
+  "lunchMenu": {
+    "days": "Montag – Freitag",
+    "hours": "11:00 – 14:00 Uhr"
+  },
+  "social": {
+    "facebook": "https://www.facebook.com/rhesicafe",
+    "instagram": "https://www.instagram.com/rhesilustenau/"
+  }
+}

@@ -1,10 +1,12 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import WeeklyMenu from "../components/WeeklyMenu.astro";
+import site from "../data/site.json";
 
+// BEISPIELDATEN – Muster-Mittagsmenüs, bitte durch echte Wochenkarte ersetzen.
 const week = [
   {
-    day: "Dienstag",
+    day: "Montag",
     soup: "Cremige Kürbissuppe",
     options: [
       {
@@ -15,6 +17,22 @@ const week = [
       {
         name: "Menü 2: Gemüsestrudel",
         description: "Mit Kartoffel-Salat",
+        price: "€ 9,90",
+      },
+    ],
+  },
+  {
+    day: "Dienstag",
+    soup: "Klare Gemüsesuppe",
+    options: [
+      {
+        name: "Menü 1: Hühnerschnitzel",
+        description: "Mit Pommes und Preiselbeeren",
+        price: "€ 10,50",
+      },
+      {
+        name: "Menü 2: Gemüsecurry",
+        description: "Mit Basmatireis",
         price: "€ 9,90",
       },
     ],
@@ -40,14 +58,14 @@ const week = [
     soup: "Tomatensuppe",
     options: [
       {
-        name: "Menü 1: Hühnerschnitzel",
-        description: "Mit Pommes und Preiselbeeren",
-        price: "€ 10,50",
+        name: "Menü 1: Rindsgulasch",
+        description: "Mit Semmelknödel",
+        price: "€ 11,50",
       },
       {
-        name: "Menü 2: Gemüsecurry",
-        description: "Mit Basmatireis",
-        price: "€ 9,90",
+        name: "Menü 2: Pasta Pomodoro",
+        description: "Mit Parmesan und Basilikum",
+        price: "€ 9,50",
       },
     ],
   },
@@ -61,9 +79,9 @@ const week = [
         price: "€ 11,50",
       },
       {
-        name: "Menü 2: Pasta Pomodoro",
-        description: "Mit Parmesan und Basilikum",
-        price: "€ 9,50",
+        name: "Menü 2: Gemischter Salat",
+        description: "Mit Hausdressing und Baguette",
+        price: "€ 8,90",
       },
     ],
   },
@@ -72,7 +90,7 @@ const week = [
 
 <BaseLayout
   title="Mittagsmenüs | Rhesi Café & Restaurant"
-  description="Unsere wechselnden Mittagsmenüs von Dienstag bis Freitag – täglich frisch gekocht im Rhesi Café & Restaurant in Lustenau."
+  description={`Unsere wechselnden Mittagsmenüs ${site.lunchMenu.days}, ${site.lunchMenu.hours} – täglich frisch gekocht im Rhesi Café & Restaurant in Lustenau.`}
 >
   <section class="bg-white py-16 text-center">
     <div class="mx-auto max-w-3xl px-6">
@@ -80,9 +98,12 @@ const week = [
         Mittagsmenüs
       </h1>
       <p class="mt-4 text-espresso/70">
-        Platzhaltertext: Von Dienstag bis Freitag servieren wir Ihnen
-        täglich wechselnde Mittagsmenüs mit Suppe und Hauptspeise – frisch
-        gekocht aus regionalen Zutaten. Änderungen vorbehalten.
+        {site.lunchMenu.days} servieren wir Ihnen täglich wechselnde
+        Mittagsmenüs mit Suppe und Hauptspeise – frisch gekocht aus
+        regionalen Zutaten. Änderungen vorbehalten.
+      </p>
+      <p class="mt-2 text-xs uppercase tracking-wide text-espresso/40">
+        Beispieldaten – die tatsächliche Wochenkarte folgt in Kürze
       </p>
     </div>
   </section>
@@ -90,8 +111,7 @@ const week = [
   <section class="mx-auto max-w-6xl px-6 py-14">
     <WeeklyMenu week={week} />
     <p class="mt-10 text-center text-sm text-espresso/60">
-      Mittagsmenüs erhältlich von 11:30 – 14:00 Uhr. Am Montag bleibt unser
-      Café geschlossen.
+      Mittagsmenüs erhältlich {site.lunchMenu.days}, {site.lunchMenu.hours}.
     </p>
   </section>
 </BaseLayout>

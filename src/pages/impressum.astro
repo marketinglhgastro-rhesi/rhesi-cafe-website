@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import site from "../data/site.json";
 ---
 
 <BaseLayout
@@ -9,11 +10,20 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   <section class="mx-auto max-w-3xl px-6 py-20">
     <h1 class="font-heading text-4xl font-semibold text-brown">Impressum</h1>
     <div class="mt-6 space-y-2 text-espresso/80 leading-relaxed">
-      <p>Platzhaltertext: Rhesi Café &amp; Restaurant</p>
-      <p>Kapellenstraße 1, 6890 Lustenau, Österreich</p>
-      <p>Tel: +43 5577 000000</p>
-      <p>E-Mail: info@rhesi-cafe.at</p>
-      <p>Platzhaltertext: Firmenbuchnummer, UID-Nummer, Gewerbebehörde.</p>
+      <p>{site.name}</p>
+      <p>
+        {site.address.street}, {site.address.addressExtra}<br />
+        {site.address.postalCode} {site.address.city}, {site.address.country}
+      </p>
+      <p>Tel: {site.phone}</p>
+      <p>E-Mail: {site.email}</p>
+      <p class="pt-4 text-xs font-semibold uppercase tracking-wide text-terracotta">
+        Bitte anpassen
+      </p>
+      <p>
+        Platzhaltertext: Firmenbuchnummer, UID-Nummer, Rechtsform,
+        Gewerbebehörde und Aufsichtsbehörde ergänzen.
+      </p>
     </div>
   </section>
 </BaseLayout>

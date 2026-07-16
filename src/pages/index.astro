@@ -3,6 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Hero from "../components/Hero.astro";
 import Card from "../components/Card.astro";
 import CTAButton from "../components/CTAButton.astro";
+import site from "../data/site.json";
 ---
 
 <!--
@@ -12,45 +13,73 @@ import CTAButton from "../components/CTAButton.astro";
 -->
 <BaseLayout
   title="Rhesi Café & Restaurant | Lustenau"
-  description="Warmes Café und Restaurant in Lustenau – gemütliche Atmosphäre, frische Küche und hausgemachte Kaffeespezialitäten."
+  description="Ihr gemütliches Café mitten in Lustenau: Frühstück, Kaffeespezialitäten, hausgemachter Kuchen und wechselnde Mittagsmenüs im Rheincenter."
 >
   <Hero
     image="/images/hero-fruehstueck-flatlay.webp"
     imageAlt="Gedeckter Frühstückstisch mit frischem Obst, Pancakes und Kaffee bei Rhesi"
-    headline="Frühstück, Kaffee & mehr"
-    subline="Gemütliche Atmosphäre, frische Küche und hausgemachte Kaffeespezialitäten mitten in Lustenau."
+    headline="Ihr Café mitten in Lustenau"
+    subline="Frühstück, hausgemachter Kuchen, Kaffeespezialitäten und wechselnde Mittagsmenüs – mitten im Rheincenter, von Montag bis Samstag für Sie da."
     ctas={[
       { label: "Speisekarte ansehen", href: "/speisekarte", variant: "primary" },
       { label: "Mittagsmenü", href: "/mittagsmenues", variant: "secondary" },
     ]}
   />
 
-  <section class="mx-auto max-w-6xl px-6 py-20">
+  <section class="mx-auto max-w-4xl px-6 py-16 text-center">
+    <h2 class="font-heading text-3xl font-semibold text-brown">
+      Willkommen im Rhesi
+    </h2>
+    <p class="mt-4 text-espresso/80 leading-relaxed">
+      Im Rhesi Café &amp; Restaurant im Rheincenter Lustenau erwartet Sie
+      eine gemütliche Auszeit vom Alltag: frisch gebrühter Kaffee,
+      hausgemachter Kuchen, ein herzhaftes Frühstück und mittags ein
+      wechselndes Menü aus der Küche – ganz ohne Hektik.
+    </p>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-6 pb-20">
     <h2 class="font-heading text-center text-3xl font-semibold text-brown">
       Entdecken Sie Rhesi
     </h2>
     <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
       <Card
+        image="/images/hero-fruehstueck-flatlay.webp"
+        imageAlt="Frühstückstisch mit frischem Obst und Pancakes bei Rhesi"
+        title="Frühstück"
+        text="Von der Klassik bis zum Avocado Toast – starten Sie entspannt in den Tag."
+        href="/speisekarte"
+        linkLabel="Zur Speisekarte"
+      />
+      <Card
         image="/images/card-speisekarte.webp"
-        imageAlt="Kaffeespezialitäten von der Rhesi Speisekarte"
-        title="Speisekarte"
-        text="Von hausgemachten Torten bis zu herzhaften Tagesgerichten – für jeden Geschmack etwas dabei."
+        imageAlt="Latte Art bei Rhesi"
+        title="Kaffee"
+        text="Espresso, Cappuccino & Co. – Kaffeespezialitäten aus unserer Hausröstung."
+        href="/speisekarte"
+        linkLabel="Zur Speisekarte"
+      />
+      <Card
+        image="/images/card-kuchen.webp"
+        imageAlt="Auswahl an hausgemachten Torten und Kuchen bei Rhesi"
+        title="Kuchen"
+        text="Hausgemachte Torten und Klassiker wie Apfelstrudel und Sachertorte."
         href="/speisekarte"
         linkLabel="Zur Speisekarte"
       />
       <Card
         image="/images/card-ueber-uns.webp"
-        imageAlt="Gemütliche Café-Atmosphäre im Rhesi"
-        title="Über uns"
-        text="Erfahren Sie mehr über unsere Geschichte, unser Team und was uns antreibt."
-        href="/ueber-uns"
-        linkLabel="Mehr erfahren"
+        imageAlt="Gemütliche Terrassen-Atmosphäre im Rhesi"
+        title="Terrasse"
+        text="Gemütliche Atmosphäre drinnen wie draußen – ideal zum Verweilen."
+        href="/kontakt"
+        linkLabel="Anfahrt"
       />
       <Card
         image="/images/card-mittagsmenue.webp"
         imageAlt="Herzhaftes Mittagsgericht im Rhesi"
-        title="Mittagsmenüs"
-        text="Von Dienstag bis Freitag täglich frisch gekochte Mittagsmenüs mit Suppe und Hauptspeise."
+        title="Mittagsmenü"
+        text={`${site.lunchMenu.days} servieren wir ein wechselndes Mittagsmenü mit Suppe und Hauptspeise.`}
         href="/mittagsmenues"
         linkLabel="Zu den Mittagsmenüs"
       />
@@ -59,6 +88,7 @@ import CTAButton from "../components/CTAButton.astro";
 
   <section class="bg-white">
     <div class="mx-auto grid max-w-6xl items-center gap-12 px-6 py-20 md:grid-cols-2">
+      <!-- TODO: Platzhalterbild – vor Launch durch ein echtes Team-/Innenraumfoto ersetzen. -->
       <img
         src="https://placehold.co/800x600/F5EDE4/4A3428?text=Rhesi+Team"
         alt="Platzhalterbild: Team des Rhesi Café & Restaurant"
@@ -69,9 +99,9 @@ import CTAButton from "../components/CTAButton.astro";
           Unsere Geschichte
         </h2>
         <p class="mt-4 text-espresso/80 leading-relaxed">
-          Platzhaltertext: Hier entsteht die Geschichte des Rhesi Café &amp;
-          Restaurant – von der Gründung bis heute. Echte Inhalte folgen im
-          nächsten Schritt.
+          Platzhaltertext (ANPASSEN): Hier entsteht die Geschichte des Rhesi
+          Café &amp; Restaurant – von der Gründung bis heute. Echte Inhalte
+          folgen im nächsten Schritt.
         </p>
         <div class="mt-8">
           <CTAButton href="/ueber-uns" variant="secondary">
@@ -85,14 +115,17 @@ import CTAButton from "../components/CTAButton.astro";
   <section class="bg-terracotta">
     <div class="mx-auto max-w-6xl px-6 py-16 text-center">
       <h2 class="font-heading text-3xl font-semibold text-white">
-        Täglich wechselnde Mittagsmenüs
+        Besuchen Sie uns im Rheincenter Lustenau
       </h2>
       <p class="mt-4 text-white/90">
-        Dienstag bis Freitag frisch gekocht – schauen Sie vorbei.
+        {site.openingHoursShort.map((entry) => `${entry.days} ${entry.hours}`).join(" · ")}
       </p>
-      <div class="mt-8">
-        <CTAButton href="/mittagsmenues" variant="secondary" onDark>
-          Mittagsmenüs ansehen
+      <div class="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
+        <CTAButton href="/speisekarte" variant="secondary" onDark>
+          Speisekarte ansehen
+        </CTAButton>
+        <CTAButton href="/kontakt" variant="secondary" onDark>
+          Kontakt & Anfahrt
         </CTAButton>
       </div>
     </div>

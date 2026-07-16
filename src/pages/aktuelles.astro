@@ -1,0 +1,39 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Card from "../components/Card.astro";
+import news from "../data/news.json";
+
+const dateFormatter = new Intl.DateTimeFormat("de-AT", {
+  day: "2-digit",
+  month: "long",
+  year: "numeric",
+});
+---
+
+<BaseLayout
+  title="Aktuelles | Rhesi Café & Restaurant"
+  description="Neuigkeiten, Veranstaltungen und saisonale Angebote aus dem Rhesi Café & Restaurant in Lustenau."
+>
+  <section class="mx-auto max-w-6xl px-6 py-20">
+    <h1 class="font-heading text-4xl font-semibold text-brown">Aktuelles</h1>
+    <p class="mt-4 max-w-2xl text-espresso/70">
+      Neuigkeiten, Aktionen und Veranstaltungen aus dem Rhesi.
+    </p>
+    <p class="mt-2 text-xs uppercase tracking-wide text-espresso/40">
+      Platzhalter-Einträge – echte Neuigkeiten folgen in Kürze
+    </p>
+
+    <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        news.items.map((item) => (
+          <Card
+            image={item.image}
+            imageAlt={item.title}
+            title={item.title}
+            text={`${dateFormatter.format(new Date(item.date))} – ${item.description}`}
+          />
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>

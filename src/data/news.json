@@ -1,0 +1,17 @@
+{
+  "_note": "PLATZHALTER – Beispiel-Einträge zur Veranschaulichung der Struktur. Bitte durch echte Neuigkeiten/Aktionen ersetzen.",
+  "items": [
+    {
+      "title": "Neue Frühstückskarte",
+      "date": "2026-07-01",
+      "description": "Ab sofort mit neuen Frühstücksvarianten und saisonalen Zutaten – vorbeikommen und probieren.",
+      "image": "/images/hero-fruehstueck-flatlay.webp"
+    },
+    {
+      "title": "Mittagsmenü jetzt auch montags",
+      "date": "2026-06-15",
+      "description": "Unser Mittagsmenü gibt es neu von Montag bis Freitag, jeweils 11:00 – 14:00 Uhr.",
+      "image": "/images/card-mittagsmenue.webp"
+    }
+  ]
+}

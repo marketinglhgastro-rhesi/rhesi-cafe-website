@@ -1,4 +1,6 @@
 ---
+import site from "../data/site.json";
+
 interface Props {
   title: string;
   description: string;
@@ -9,6 +11,46 @@ const { title, description, ogImage = "/images/og-default.jpg" } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const ogImageURL = new URL(ogImage, Astro.site);
+
+const dayMap: Record<string, string> = {
+  Montag: "Monday",
+  Dienstag: "Tuesday",
+  Mittwoch: "Wednesday",
+  Donnerstag: "Thursday",
+  Freitag: "Friday",
+  Samstag: "Saturday",
+  Sonntag: "Sunday",
+};
+
+const openingHoursSpecification = site.openingHours
+  .filter((entry) => entry.hours !== "geschlossen")
+  .map((entry) => {
+    const [opens, closes] = entry.hours.split(" – ");
+    return {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: dayMap[entry.day],
+      opens,
+      closes,
+    };
+  });
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  name: site.name,
+  telephone: site.phone,
+  email: site.email,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: `${site.address.street}, ${site.address.addressExtra}`,
+    postalCode: site.address.postalCode,
+    addressLocality: site.address.city,
+    addressCountry: "AT",
+  },
+  url: Astro.site?.toString(),
+  sameAs: [site.social.facebook, site.social.instagram],
+  openingHoursSpecification,
+};
 ---
 
 <title>{title}</title>
@@ -28,3 +70,6 @@ const ogImageURL = new URL(ogImage, Astro.site);
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
 <meta name="twitter:image" content={ogImageURL} />
+
+<!-- Structured data -->
+<script type="application/ld+json" is:inline set:html={JSON.stringify(structuredData)} />
