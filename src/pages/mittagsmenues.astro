@@ -1,0 +1,97 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import WeeklyMenu from "../components/WeeklyMenu.astro";
+
+const week = [
+  {
+    day: "Dienstag",
+    soup: "Cremige Kürbissuppe",
+    options: [
+      {
+        name: "Menü 1: Schweinsbraten",
+        description: "Mit Semmelknödel und Krautsalat",
+        price: "€ 10,90",
+      },
+      {
+        name: "Menü 2: Gemüsestrudel",
+        description: "Mit Kartoffel-Salat",
+        price: "€ 9,90",
+      },
+    ],
+  },
+  {
+    day: "Mittwoch",
+    soup: "Rindsuppe mit Frittaten",
+    options: [
+      {
+        name: "Menü 1: Cordon Bleu",
+        description: "Mit Petersilkartoffeln",
+        price: "€ 11,90",
+      },
+      {
+        name: "Menü 2: Käsespätzle",
+        description: "Mit Röstzwiebeln und Salat",
+        price: "€ 9,50",
+      },
+    ],
+  },
+  {
+    day: "Donnerstag",
+    soup: "Tomatensuppe",
+    options: [
+      {
+        name: "Menü 1: Hühnerschnitzel",
+        description: "Mit Pommes und Preiselbeeren",
+        price: "€ 10,50",
+      },
+      {
+        name: "Menü 2: Gemüsecurry",
+        description: "Mit Basmatireis",
+        price: "€ 9,90",
+      },
+    ],
+  },
+  {
+    day: "Freitag",
+    soup: "Grießnockerlsuppe",
+    options: [
+      {
+        name: "Menü 1: Gebackener Fisch",
+        description: "Mit Erdäpfelsalat",
+        price: "€ 11,50",
+      },
+      {
+        name: "Menü 2: Pasta Pomodoro",
+        description: "Mit Parmesan und Basilikum",
+        price: "€ 9,50",
+      },
+    ],
+  },
+];
+---
+
+<BaseLayout
+  title="Mittagsmenüs | Rhesi Café & Restaurant"
+  description="Unsere wechselnden Mittagsmenüs von Dienstag bis Freitag – täglich frisch gekocht im Rhesi Café & Restaurant in Lustenau."
+>
+  <section class="bg-white py-16 text-center">
+    <div class="mx-auto max-w-3xl px-6">
+      <h1 class="font-heading text-4xl font-semibold text-brown">
+        Mittagsmenüs
+      </h1>
+      <p class="mt-4 text-espresso/70">
+        Platzhaltertext: Von Dienstag bis Freitag servieren wir Ihnen
+        täglich wechselnde Mittagsmenüs mit Suppe und Hauptspeise – frisch
+        gekocht aus regionalen Zutaten. Änderungen vorbehalten.
+      </p>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-6 py-14">
+    <WeeklyMenu week={week} />
+    <p class="mt-10 text-center text-sm text-espresso/60">
+      Mittagsmenüs erhältlich von 11:30 – 14:00 Uhr. Am Montag bleibt unser
+      Café geschlossen.
+    </p>
+  </section>
+</BaseLayout>
