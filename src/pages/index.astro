@@ -5,14 +5,19 @@ import Card from "../components/Card.astro";
 import CTAButton from "../components/CTAButton.astro";
 ---
 
+<!--
+  TODO: Alle Fotos auf dieser Seite (Hero, Highlight-Cards) sind lizenzfreie
+  Unsplash-Stockfotos als Platzhalter. Vor dem Launch durch eigene
+  Café-Fotos ersetzen.
+-->
 <BaseLayout
   title="Rhesi Café & Restaurant | Lustenau"
   description="Warmes Café und Restaurant in Lustenau – gemütliche Atmosphäre, frische Küche und hausgemachte Kaffeespezialitäten."
 >
   <Hero
-    leftImage="https://placehold.co/800x1000/C87B4A/FFFDFB?text=Fr%C3%BChst%C3%BCck"
-    leftImageAlt="Frühstück bei Rhesi"
-    rightImage="https://placehold.co/800x1000/4A3428/F5EDE4?text=Kuchen"
+    leftImage="/images/hero-fruehstueck.webp"
+    leftImageAlt="Frisch gedeckter Frühstückstisch bei Rhesi"
+    rightImage="/images/hero-kuchen.webp"
     rightImageAlt="Kuchenauswahl bei Rhesi"
     headline="Frühstück, Kaffee & mehr"
     subline="Gemütliche Atmosphäre, frische Küche und hausgemachte Kaffeespezialitäten mitten in Lustenau."
@@ -28,24 +33,24 @@ import CTAButton from "../components/CTAButton.astro";
     </h2>
     <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
       <Card
-        image="https://placehold.co/600x400/C87B4A/FFFDFB?text=Speisekarte"
-        imageAlt="Platzhalterbild: Speisekarte"
+        image="/images/card-speisekarte.webp"
+        imageAlt="Kaffeespezialitäten von der Rhesi Speisekarte"
         title="Speisekarte"
         text="Von hausgemachten Torten bis zu herzhaften Tagesgerichten – für jeden Geschmack etwas dabei."
         href="/speisekarte"
         linkLabel="Zur Speisekarte"
       />
       <Card
-        image="https://placehold.co/600x400/4A3428/F5EDE4?text=%C3%9Cber+uns"
-        imageAlt="Platzhalterbild: Über uns"
+        image="/images/card-ueber-uns.webp"
+        imageAlt="Gemütliche Café-Atmosphäre im Rhesi"
         title="Über uns"
         text="Erfahren Sie mehr über unsere Geschichte, unser Team und was uns antreibt."
         href="/ueber-uns"
         linkLabel="Mehr erfahren"
       />
       <Card
-        image="https://placehold.co/600x400/241812/F5EDE4?text=Mittagsmen%C3%BCs"
-        imageAlt="Platzhalterbild: Mittagsmenüs"
+        image="/images/card-mittagsmenue.webp"
+        imageAlt="Herzhaftes Mittagsgericht im Rhesi"
         title="Mittagsmenüs"
         text="Von Dienstag bis Freitag täglich frisch gekochte Mittagsmenüs mit Suppe und Hauptspeise."
         href="/mittagsmenues"
