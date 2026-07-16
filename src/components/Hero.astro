@@ -8,69 +8,55 @@ interface CTA {
 }
 
 interface Props {
-  leftImage: string;
-  leftImageAlt: string;
-  rightImage: string;
-  rightImageAlt: string;
+  image: string;
+  imageAlt: string;
   headline: string;
   subline?: string;
   ctas?: CTA[];
 }
 
-const {
-  leftImage,
-  leftImageAlt,
-  rightImage,
-  rightImageAlt,
-  headline,
-  subline,
-  ctas = [],
-} = Astro.props;
+const { image, imageAlt, headline, subline, ctas = [] } = Astro.props;
 ---
 
-<section class="bg-cream">
-  <div class="mx-auto grid max-w-6xl md:grid-cols-[1fr_1.4fr_1fr] md:items-stretch">
-    <div class="order-2 h-64 md:order-1 md:h-auto">
-      <img
-        src={leftImage}
-        alt={leftImageAlt}
-        class="h-full w-full object-cover"
-      />
-    </div>
+<!-- TODO: Hero-Foto ist ein Unsplash-Platzhalter. Vor Launch durch ein eigenes Rhesi-Foto ersetzen. -->
+<section class="relative flex min-h-[60vh] items-center overflow-hidden md:min-h-[85vh]">
+  <img
+    src={image}
+    alt={imageAlt}
+    class="absolute inset-0 h-full w-full object-cover"
+  />
 
-    <div class="order-1 flex flex-col items-center justify-center px-6 py-16 text-center md:order-2 md:px-10 md:py-24">
-      <h1
-        data-reveal
-        class="font-heading max-w-lg text-4xl font-semibold text-brown sm:text-5xl"
-      >
-        {headline}
-      </h1>
-      {
-        subline && (
-          <p data-reveal class="mt-6 max-w-md text-espresso/70">
-            {subline}
-          </p>
-        )
-      }
-      {
-        ctas.length > 0 && (
-          <div data-reveal class="mt-10 flex w-full flex-col gap-4 sm:w-auto sm:flex-row">
-            {ctas.map((cta) => (
-              <CTAButton href={cta.href} variant={cta.variant ?? "primary"}>
-                {cta.label}
-              </CTAButton>
-            ))}
-          </div>
-        )
-      }
-    </div>
+  <div class="absolute inset-0 bg-espresso/20"></div>
+  <div
+    class="absolute inset-0"
+    style="background: radial-gradient(ellipse at center, rgba(245,237,228,0.92) 0%, rgba(245,237,228,0.78) 40%, rgba(245,237,228,0.4) 65%, rgba(245,237,228,0.05) 100%);"
+  >
+  </div>
 
-    <div class="order-3 h-64 md:h-auto">
-      <img
-        src={rightImage}
-        alt={rightImageAlt}
-        class="h-full w-full object-cover"
-      />
-    </div>
+  <div
+    data-reveal
+    class="relative mx-auto flex w-full max-w-3xl flex-col items-center px-6 py-20 text-center"
+  >
+    <h1 class="font-heading text-4xl font-semibold text-brown drop-shadow-sm sm:text-5xl md:text-6xl">
+      {headline}
+    </h1>
+    {
+      subline && (
+        <p class="mt-6 max-w-xl text-lg text-espresso/90 drop-shadow-sm sm:text-xl">
+          {subline}
+        </p>
+      )
+    }
+    {
+      ctas.length > 0 && (
+        <div class="mt-10 flex w-full flex-col gap-4 sm:w-auto sm:flex-row">
+          {ctas.map((cta) => (
+            <CTAButton href={cta.href} variant={cta.variant ?? "primary"}>
+              {cta.label}
+            </CTAButton>
+          ))}
+        </div>
+      )
+    }
   </div>
 </section>
