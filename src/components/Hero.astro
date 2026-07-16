@@ -8,43 +8,69 @@ interface CTA {
 }
 
 interface Props {
-  image: string;
-  imageAlt: string;
+  leftImage: string;
+  leftImageAlt: string;
+  rightImage: string;
+  rightImageAlt: string;
   headline: string;
   subline?: string;
   ctas?: CTA[];
 }
 
-const { image, imageAlt, headline, subline, ctas = [] } = Astro.props;
+const {
+  leftImage,
+  leftImageAlt,
+  rightImage,
+  rightImageAlt,
+  headline,
+  subline,
+  ctas = [],
+} = Astro.props;
 ---
 
-<section class="relative flex min-h-[85vh] items-center overflow-hidden">
-  <img
-    src={image}
-    alt={imageAlt}
-    class="absolute inset-0 h-full w-full object-cover"
-  />
-  <div class="absolute inset-0 bg-espresso/60"></div>
+<section class="bg-cream">
+  <div class="mx-auto grid max-w-6xl md:grid-cols-[1fr_1.4fr_1fr] md:items-stretch">
+    <div class="order-2 h-64 md:order-1 md:h-auto">
+      <img
+        src={leftImage}
+        alt={leftImageAlt}
+        class="h-full w-full object-cover"
+      />
+    </div>
 
-  <div class="relative mx-auto w-full max-w-6xl px-6 py-24 text-center sm:text-left">
-    <h1 class="font-heading max-w-2xl text-4xl font-semibold text-white sm:text-5xl md:text-6xl">
-      {headline}
-    </h1>
-    {
-      subline && (
-        <p class="mt-6 max-w-xl text-lg text-white/90 sm:text-xl">{subline}</p>
-      )
-    }
-    {
-      ctas.length > 0 && (
-        <div class="mt-10 flex flex-col gap-4 sm:flex-row">
-          {ctas.map((cta) => (
-            <CTAButton href={cta.href} variant={cta.variant ?? "primary"} onDark>
-              {cta.label}
-            </CTAButton>
-          ))}
-        </div>
-      )
-    }
+    <div class="order-1 flex flex-col items-center justify-center px-6 py-16 text-center md:order-2 md:px-10 md:py-24">
+      <h1
+        data-reveal
+        class="font-heading max-w-lg text-4xl font-semibold text-brown sm:text-5xl"
+      >
+        {headline}
+      </h1>
+      {
+        subline && (
+          <p data-reveal class="mt-6 max-w-md text-espresso/70">
+            {subline}
+          </p>
+        )
+      }
+      {
+        ctas.length > 0 && (
+          <div data-reveal class="mt-10 flex w-full flex-col gap-4 sm:w-auto sm:flex-row">
+            {ctas.map((cta) => (
+              <CTAButton href={cta.href} variant={cta.variant ?? "primary"}>
+                {cta.label}
+              </CTAButton>
+            ))}
+          </div>
+        )
+      }
+    </div>
+
+    <div class="order-3 h-64 md:h-auto">
+      <img
+        src={rightImage}
+        alt={rightImageAlt}
+        class="h-full w-full object-cover"
+      />
+    </div>
   </div>
 </section>

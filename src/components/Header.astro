@@ -1,4 +1,7 @@
 ---
+import TopBar from "./TopBar.astro";
+import CTAButton from "./CTAButton.astro";
+
 const navItems = [
   { label: "Startseite", href: "/" },
   { label: "Über uns", href: "/ueber-uns" },
@@ -6,57 +9,84 @@ const navItems = [
   { label: "Mittagsmenüs", href: "/mittagsmenues" },
   { label: "Kontakt", href: "/kontakt" },
 ];
+
+const currentPath = Astro.url.pathname;
+const isActive = (href: string) =>
+  href === "/" ? currentPath === "/" : currentPath.startsWith(href);
 ---
 
-<header class="sticky top-0 z-50 border-b border-brown/10 bg-white/95 backdrop-blur">
-  <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-    <a href="/" class="font-heading text-xl font-semibold text-brown">
-      Rhesi Café &amp; Restaurant
-    </a>
+<header class="sticky top-0 z-50">
+  <TopBar />
 
-    <ul class="hidden gap-8 text-sm font-medium text-espresso md:flex">
+  <div class="border-b border-brown/10 bg-white">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+      <a href="/" class="font-heading text-2xl italic text-brown">Rhesi</a>
+
+      <ul class="hidden items-center gap-8 text-sm font-medium text-espresso md:flex">
+        {
+          navItems.map((item) => (
+            <li>
+              <a
+                href={item.href}
+                aria-current={isActive(item.href) ? "page" : undefined}
+                class={`transition-colors hover:text-terracotta ${
+                  isActive(item.href) ? "text-terracotta" : ""
+                }`}
+              >
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+
+      <div class="hidden md:block">
+        <CTAButton href="/kontakt" variant="secondary">Anfahrt</CTAButton>
+      </div>
+
+      <button
+        id="menu-toggle"
+        type="button"
+        class="flex flex-col gap-1.5 p-2 md:hidden"
+        aria-label="Menü öffnen"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <span class="block h-0.5 w-6 bg-brown"></span>
+        <span class="block h-0.5 w-6 bg-brown"></span>
+        <span class="block h-0.5 w-6 bg-brown"></span>
+      </button>
+    </nav>
+
+    <ul
+      id="mobile-menu"
+      class="hidden flex-col gap-1 border-t border-brown/10 bg-white px-6 py-4 text-sm font-medium text-espresso md:hidden"
+    >
       {
         navItems.map((item) => (
           <li>
-            <a href={item.href} class="transition-colors hover:text-terracotta">
+            <a
+              href={item.href}
+              aria-current={isActive(item.href) ? "page" : undefined}
+              class={`block rounded-lg px-2 py-3 transition-colors hover:bg-cream hover:text-terracotta ${
+                isActive(item.href) ? "text-terracotta" : ""
+              }`}
+            >
               {item.label}
             </a>
           </li>
         ))
       }
+      <li class="pt-2">
+        <a
+          href="/kontakt"
+          class="block rounded-full border border-brown/40 px-4 py-3 text-center text-brown"
+        >
+          Anfahrt
+        </a>
+      </li>
     </ul>
-
-    <button
-      id="menu-toggle"
-      type="button"
-      class="flex flex-col gap-1.5 p-2 md:hidden"
-      aria-label="Menü öffnen"
-      aria-expanded="false"
-      aria-controls="mobile-menu"
-    >
-      <span class="block h-0.5 w-6 bg-brown"></span>
-      <span class="block h-0.5 w-6 bg-brown"></span>
-      <span class="block h-0.5 w-6 bg-brown"></span>
-    </button>
-  </nav>
-
-  <ul
-    id="mobile-menu"
-    class="hidden flex-col gap-1 border-t border-brown/10 bg-white px-6 py-4 text-sm font-medium text-espresso md:hidden"
-  >
-    {
-      navItems.map((item) => (
-        <li>
-          <a
-            href={item.href}
-            class="block rounded-lg px-2 py-3 transition-colors hover:bg-cream hover:text-terracotta"
-          >
-            {item.label}
-          </a>
-        </li>
-      ))
-    }
-  </ul>
+  </div>
 </header>
 
 <script>
