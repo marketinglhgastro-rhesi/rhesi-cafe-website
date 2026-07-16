@@ -1,16 +1,70 @@
 ---
+const navItems = [
+  { label: "Startseite", href: "/" },
+  { label: "Über uns", href: "/ueber-uns" },
+  { label: "Speisekarte", href: "/speisekarte" },
+  { label: "Aktuelles", href: "/aktuelles" },
+  { label: "Kontakt", href: "/kontakt" },
+];
 ---
 
-<header class="bg-white border-b border-brown/10">
+<header class="sticky top-0 z-50 border-b border-brown/10 bg-white/95 backdrop-blur">
   <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
     <a href="/" class="font-heading text-xl font-semibold text-brown">
       Rhesi Café &amp; Restaurant
     </a>
-    <ul class="flex gap-6 text-sm font-medium text-espresso">
-      <li><a href="/" class="hover:text-terracotta">Home</a></li>
-      <li><a href="/speisekarte" class="hover:text-terracotta">Speisekarte</a></li>
-      <li><a href="/ueber-uns" class="hover:text-terracotta">Über uns</a></li>
-      <li><a href="/kontakt" class="hover:text-terracotta">Kontakt</a></li>
+
+    <ul class="hidden gap-8 text-sm font-medium text-espresso md:flex">
+      {
+        navItems.map((item) => (
+          <li>
+            <a href={item.href} class="transition-colors hover:text-terracotta">
+              {item.label}
+            </a>
+          </li>
+        ))
+      }
     </ul>
+
+    <button
+      id="menu-toggle"
+      type="button"
+      class="flex flex-col gap-1.5 p-2 md:hidden"
+      aria-label="Menü öffnen"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+    >
+      <span class="block h-0.5 w-6 bg-brown"></span>
+      <span class="block h-0.5 w-6 bg-brown"></span>
+      <span class="block h-0.5 w-6 bg-brown"></span>
+    </button>
   </nav>
+
+  <ul
+    id="mobile-menu"
+    class="hidden flex-col gap-1 border-t border-brown/10 bg-white px-6 py-4 text-sm font-medium text-espresso md:hidden"
+  >
+    {
+      navItems.map((item) => (
+        <li>
+          <a
+            href={item.href}
+            class="block rounded-lg px-2 py-3 transition-colors hover:bg-cream hover:text-terracotta"
+          >
+            {item.label}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
 </header>
+
+<script>
+  const toggle = document.getElementById("menu-toggle");
+  const menu = document.getElementById("mobile-menu");
+
+  toggle?.addEventListener("click", () => {
+    const isOpen = menu?.classList.toggle("hidden") === false;
+    toggle.setAttribute("aria-expanded", String(isOpen));
+  });
+</script>

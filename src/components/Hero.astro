@@ -1,0 +1,50 @@
+---
+import CTAButton from "./CTAButton.astro";
+
+interface CTA {
+  label: string;
+  href: string;
+  variant?: "primary" | "secondary";
+}
+
+interface Props {
+  image: string;
+  imageAlt: string;
+  headline: string;
+  subline?: string;
+  ctas?: CTA[];
+}
+
+const { image, imageAlt, headline, subline, ctas = [] } = Astro.props;
+---
+
+<section class="relative flex min-h-[85vh] items-center overflow-hidden">
+  <img
+    src={image}
+    alt={imageAlt}
+    class="absolute inset-0 h-full w-full object-cover"
+  />
+  <div class="absolute inset-0 bg-espresso/60"></div>
+
+  <div class="relative mx-auto w-full max-w-6xl px-6 py-24 text-center sm:text-left">
+    <h1 class="font-heading max-w-2xl text-4xl font-semibold text-white sm:text-5xl md:text-6xl">
+      {headline}
+    </h1>
+    {
+      subline && (
+        <p class="mt-6 max-w-xl text-lg text-white/90 sm:text-xl">{subline}</p>
+      )
+    }
+    {
+      ctas.length > 0 && (
+        <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+          {ctas.map((cta) => (
+            <CTAButton href={cta.href} variant={cta.variant ?? "primary"} onDark>
+              {cta.label}
+            </CTAButton>
+          ))}
+        </div>
+      )
+    }
+  </div>
+</section>

@@ -1,0 +1,40 @@
+---
+interface MenuItem {
+  name: string;
+  description?: string;
+  price: string;
+}
+
+interface Props {
+  title: string;
+  items: MenuItem[];
+}
+
+const { title, items } = Astro.props;
+---
+
+<section class="mx-auto max-w-3xl px-6 py-10">
+  <h2 class="font-heading text-2xl font-semibold text-brown sm:text-3xl">
+    {title}
+  </h2>
+  <ul class="mt-8 space-y-6">
+    {
+      items.map((item) => (
+        <li>
+          <div class="flex items-baseline gap-2">
+            <span class="font-heading font-medium text-espresso">
+              {item.name}
+            </span>
+            <span class="flex-1 border-b border-dotted border-brown/30" />
+            <span class="font-heading font-medium text-terracotta">
+              {item.price}
+            </span>
+          </div>
+          {item.description && (
+            <p class="mt-1 text-sm text-espresso/60">{item.description}</p>
+          )}
+        </li>
+      ))
+    }
+  </ul>
+</section>

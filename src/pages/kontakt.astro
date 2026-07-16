@@ -1,0 +1,20 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ContactInfo from "../components/ContactInfo.astro";
+---
+
+<BaseLayout
+  title="Kontakt | Rhesi Café & Restaurant"
+  description="Kontaktieren Sie das Rhesi Café & Restaurant in Lustenau – Adresse, Öffnungszeiten und Anfahrt."
+>
+  <section class="mx-auto max-w-6xl px-6 py-20">
+    <h1 class="font-heading text-4xl font-semibold text-brown">Kontakt</h1>
+    <p class="mt-4 max-w-2xl text-espresso/70">
+      Platzhaltertext: Wir freuen uns über Ihre Nachricht oder Ihren Besuch im
+      Rhesi Café &amp; Restaurant.
+    </p>
+    <div class="mt-12">
+      <ContactInfo />
+    </div>
+  </section>
+</BaseLayout>

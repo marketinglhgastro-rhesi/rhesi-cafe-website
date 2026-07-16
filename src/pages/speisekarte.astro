@@ -1,0 +1,46 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import MenuCategory from "../components/MenuCategory.astro";
+
+const kaffee = [
+  { name: "Espresso", description: "Klassisch, kräftig", price: "€ 2,50" },
+  { name: "Cappuccino", description: "Mit fein aufgeschäumter Milch", price: "€ 3,50" },
+  { name: "Rhesi Melange", description: "Hausröstung, mild", price: "€ 3,80" },
+];
+
+const fruehstueck = [
+  { name: "Frühstück Klassik", description: "Gebäck, Butter, Marmelade, Ei", price: "€ 8,90" },
+  { name: "Avocado Toast", description: "Sauerteigbrot, Avocado, Chili", price: "€ 9,50" },
+];
+
+const hauptgerichte = [
+  { name: "Tagesgericht", description: "Täglich wechselnd, siehe Tafel", price: "€ 12,90" },
+  { name: "Rhesi Burger", description: "Rindfleisch, Cheddar, Pommes", price: "€ 14,50" },
+  { name: "Vegetarisches Curry", description: "Saisonales Gemüse, Basmatireis", price: "€ 13,20" },
+];
+
+const kuchen = [
+  { name: "Apfelstrudel", description: "Hausgemacht, mit Vanillesauce", price: "€ 5,50" },
+  { name: "Sachertorte", description: "Klassisch, mit Schlagobers", price: "€ 5,90" },
+];
+---
+
+<BaseLayout
+  title="Speisekarte | Rhesi Café & Restaurant"
+  description="Entdecken Sie unsere Speisekarte mit Kaffeespezialitäten, Frühstück, Hauptgerichten und hausgemachten Kuchen."
+>
+  <section class="bg-white py-16 text-center">
+    <div class="mx-auto max-w-3xl px-6">
+      <h1 class="font-heading text-4xl font-semibold text-brown">Speisekarte</h1>
+      <p class="mt-4 text-espresso/70">
+        Platzhaltertext: kurze Einleitung zur Küche und den Zutaten des Rhesi
+        Café &amp; Restaurant.
+      </p>
+    </div>
+  </section>
+
+  <MenuCategory title="Kaffee & Getränke" items={kaffee} />
+  <MenuCategory title="Frühstück" items={fruehstueck} />
+  <MenuCategory title="Hauptgerichte" items={hauptgerichte} />
+  <MenuCategory title="Kuchen & Desserts" items={kuchen} />
+</BaseLayout>

@@ -1,0 +1,95 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/Hero.astro";
+import Card from "../components/Card.astro";
+import CTAButton from "../components/CTAButton.astro";
+---
+
+<BaseLayout
+  title="Rhesi Café & Restaurant | Lustenau"
+  description="Warmes Café und Restaurant in Lustenau – gemütliche Atmosphäre, frische Küche und hausgemachte Kaffeespezialitäten."
+>
+  <Hero
+    image="https://placehold.co/1600x900/241812/F5EDE4?text=Rhesi+Caf%C3%A9"
+    imageAlt="Platzhalterbild: Gastraum des Rhesi Café & Restaurant"
+    headline="Willkommen im Rhesi Café & Restaurant"
+    subline="Gemütliche Atmosphäre, frische Küche und hausgemachte Kaffeespezialitäten mitten in Lustenau."
+    ctas={[
+      { label: "Speisekarte ansehen", href: "/speisekarte", variant: "primary" },
+      { label: "Kontakt", href: "/kontakt", variant: "secondary" },
+    ]}
+  />
+
+  <section class="mx-auto max-w-6xl px-6 py-20">
+    <h2 class="font-heading text-center text-3xl font-semibold text-brown">
+      Entdecken Sie Rhesi
+    </h2>
+    <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <Card
+        image="https://placehold.co/600x400/C87B4A/FFFDFB?text=Speisekarte"
+        imageAlt="Platzhalterbild: Speisekarte"
+        title="Speisekarte"
+        text="Von hausgemachten Torten bis zu herzhaften Tagesgerichten – für jeden Geschmack etwas dabei."
+        href="/speisekarte"
+        linkLabel="Zur Speisekarte"
+      />
+      <Card
+        image="https://placehold.co/600x400/4A3428/F5EDE4?text=%C3%9Cber+uns"
+        imageAlt="Platzhalterbild: Über uns"
+        title="Über uns"
+        text="Erfahren Sie mehr über unsere Geschichte, unser Team und was uns antreibt."
+        href="/ueber-uns"
+        linkLabel="Mehr erfahren"
+      />
+      <Card
+        image="https://placehold.co/600x400/241812/F5EDE4?text=Aktuelles"
+        imageAlt="Platzhalterbild: Aktuelles"
+        title="Aktuelles"
+        text="Neuigkeiten, Veranstaltungen und saisonale Angebote aus dem Rhesi."
+        href="/aktuelles"
+        linkLabel="Alle Neuigkeiten"
+      />
+    </div>
+  </section>
+
+  <section class="bg-white">
+    <div class="mx-auto grid max-w-6xl items-center gap-12 px-6 py-20 md:grid-cols-2">
+      <img
+        src="https://placehold.co/800x600/F5EDE4/4A3428?text=Rhesi+Team"
+        alt="Platzhalterbild: Team des Rhesi Café & Restaurant"
+        class="w-full rounded-2xl object-cover"
+      />
+      <div>
+        <h2 class="font-heading text-3xl font-semibold text-brown">
+          Unsere Geschichte
+        </h2>
+        <p class="mt-4 text-espresso/80 leading-relaxed">
+          Platzhaltertext: Hier entsteht die Geschichte des Rhesi Café &amp;
+          Restaurant – von der Gründung bis heute. Echte Inhalte folgen im
+          nächsten Schritt.
+        </p>
+        <div class="mt-8">
+          <CTAButton href="/ueber-uns" variant="secondary">
+            Unsere Geschichte lesen
+          </CTAButton>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-terracotta">
+    <div class="mx-auto max-w-6xl px-6 py-16 text-center">
+      <h2 class="font-heading text-3xl font-semibold text-white">
+        Reservieren Sie Ihren Tisch
+      </h2>
+      <p class="mt-4 text-white/90">
+        Wir freuen uns auf Ihren Besuch im Rhesi Café &amp; Restaurant.
+      </p>
+      <div class="mt-8">
+        <CTAButton href="/kontakt" variant="secondary" onDark>
+          Jetzt reservieren
+        </CTAButton>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
