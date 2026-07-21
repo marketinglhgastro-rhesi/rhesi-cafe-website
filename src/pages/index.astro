@@ -26,7 +26,7 @@ import site from "../data/site.json";
     ]}
   />
 
-  <section class="mx-auto max-w-4xl px-6 py-16 text-center">
+  <section data-reveal="up" class="mx-auto max-w-4xl px-6 py-16 text-center">
     <h2 class="font-heading text-3xl font-semibold text-brown">
       Willkommen im Rhesi
     </h2>
@@ -50,6 +50,7 @@ import site from "../data/site.json";
         text="Von der Klassik bis zum Avocado Toast – starten Sie entspannt in den Tag."
         href="/speisekarte"
         linkLabel="Zur Speisekarte"
+        reveal="left"
       />
       <Card
         image="/images/card-speisekarte.webp"
@@ -58,6 +59,7 @@ import site from "../data/site.json";
         text="Espresso, Cappuccino & Co. – Kaffeespezialitäten aus unserer Hausröstung."
         href="/speisekarte"
         linkLabel="Zur Speisekarte"
+        reveal="up"
       />
       <Card
         image="/images/card-kuchen.webp"
@@ -66,6 +68,7 @@ import site from "../data/site.json";
         text="Hausgemachte Torten und Klassiker wie Apfelstrudel und Sachertorte."
         href="/speisekarte"
         linkLabel="Zur Speisekarte"
+        reveal="right"
       />
       <Card
         image="/images/card-ueber-uns.webp"
@@ -74,6 +77,7 @@ import site from "../data/site.json";
         text="Gemütliche Atmosphäre drinnen wie draußen – ideal zum Verweilen."
         href="/kontakt"
         linkLabel="Anfahrt"
+        reveal="left"
       />
       <Card
         image="/images/card-mittagsmenue.webp"
@@ -82,6 +86,7 @@ import site from "../data/site.json";
         text={`${site.lunchMenu.days} servieren wir ein wechselndes Mittagsmenü mit Suppe und Hauptspeise.`}
         href="/mittagsmenues"
         linkLabel="Zu den Mittagsmenüs"
+        reveal="right"
       />
     </div>
   </section>
@@ -90,11 +95,12 @@ import site from "../data/site.json";
     <div class="mx-auto grid max-w-6xl items-center gap-12 px-6 py-20 md:grid-cols-2">
       <!-- TODO: Platzhalterbild – vor Launch durch ein echtes Team-/Innenraumfoto ersetzen. -->
       <img
+        data-reveal="left"
         src="https://placehold.co/800x600/F5EDE4/4A3428?text=Rhesi+Team"
         alt="Platzhalterbild: Team des Rhesi Café & Restaurant"
         class="w-full rounded-2xl object-cover"
       />
-      <div>
+      <div data-reveal="right">
         <h2 class="font-heading text-3xl font-semibold text-brown">
           Unsere Geschichte
         </h2>
@@ -113,7 +119,7 @@ import site from "../data/site.json";
   </section>
 
   <section class="bg-terracotta">
-    <div class="mx-auto max-w-6xl px-6 py-16 text-center">
+    <div data-reveal="up" class="mx-auto max-w-6xl px-6 py-16 text-center">
       <h2 class="font-heading text-3xl font-semibold text-white">
         Besuchen Sie uns im Rheincenter Lustenau
       </h2>

@@ -8,12 +8,13 @@ interface MenuItem {
 interface Props {
   title: string;
   items: MenuItem[];
+  reveal?: "up" | "left" | "right";
 }
 
-const { title, items } = Astro.props;
+const { title, items, reveal } = Astro.props;
 ---
 
-<section class="mx-auto max-w-3xl px-6 py-10">
+<section data-reveal={reveal} class="mx-auto max-w-3xl px-6 py-10">
   <h2 class="font-heading text-2xl font-semibold text-brown sm:text-3xl">
     {title}
   </h2>

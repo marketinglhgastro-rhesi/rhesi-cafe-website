@@ -5,7 +5,7 @@ const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(site.address.
 ---
 
 <div class="grid gap-10 md:grid-cols-2">
-  <div class="space-y-6">
+  <div data-reveal="left" class="space-y-6">
     <div>
       <h3 class="font-heading text-lg font-semibold text-brown">Adresse</h3>
       <p class="mt-1 text-sm text-espresso/80">
@@ -41,7 +41,7 @@ const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(site.address.
     </div>
   </div>
 
-  <div class="min-h-[320px] overflow-hidden rounded-2xl ring-1 ring-brown/10">
+  <div data-reveal="right" class="min-h-[320px] overflow-hidden rounded-2xl ring-1 ring-brown/10">
     <iframe
       title={`Standort ${site.name}`}
       src={mapSrc}

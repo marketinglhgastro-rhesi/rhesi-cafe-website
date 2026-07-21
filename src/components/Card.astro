@@ -6,13 +6,24 @@ interface Props {
   text: string;
   href?: string;
   linkLabel?: string;
+  reveal?: "up" | "left" | "right";
 }
 
-const { image, imageAlt = "", title, text, href, linkLabel = "Mehr erfahren" } =
-  Astro.props;
+const {
+  image,
+  imageAlt = "",
+  title,
+  text,
+  href,
+  linkLabel = "Mehr erfahren",
+  reveal,
+} = Astro.props;
 ---
 
-<article class="flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-brown/10">
+<article
+  data-reveal={reveal}
+  class="flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-brown/10"
+>
   {
     image && (
       <img

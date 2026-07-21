@@ -21,7 +21,11 @@ import menu from "../data/menu.json";
     </div>
   </section>
 
-  {menu.categories.map((category) => (
-    <MenuCategory title={category.title} items={category.items} />
+  {menu.categories.map((category, index) => (
+    <MenuCategory
+      title={category.title}
+      items={category.items}
+      reveal={index % 2 === 0 ? "left" : "right"}
+    />
   ))}
 </BaseLayout>
