@@ -1,18 +1,101 @@
 {
-  "_note": "BEISPIELDATEN – dies ist eine plausible Muster-Speisekarte, keine echten Rhesi-Preise oder -Gerichte. Bitte durch die tatsächliche Speisekarte ersetzen, sobald sie vorliegt.",
+  "_note": "Suppen & Salate, Hauptspeisen, Speisen für den kleinen Hunger und Frühstück sind die echte Rhesi-Karte. Kaffee & Heißgetränke sowie Getränke sind weiterhin BEISPIELDATEN (isPlaceholder: true) und müssen noch durch die echte Karte ersetzt werden. Kuchen wird bewusst nicht mit Einzelpreisen geführt, siehe Hinweistext auf der Speisekarten-Seite.",
+  "allergenLegend": {
+    "A": "Gluten",
+    "B": "Krebstiere",
+    "C": "Eier",
+    "D": "Fisch",
+    "E": "Erdnüsse",
+    "F": "Soja",
+    "G": "Milch",
+    "H": "Schalenfrüchte",
+    "L": "Sellerie",
+    "M": "Senf",
+    "N": "Sesam",
+    "O": "Sulfite",
+    "P": "Lupine",
+    "R": "Weichtiere"
+  },
   "categories": [
     {
-      "title": "Frühstück",
+      "title": "Suppen & Salate",
       "items": [
-        { "name": "Frühstück Klassik", "description": "Gebäck, Butter, Marmelade, Honig, gekochtes Ei", "price": "€ 8,90" },
-        { "name": "Rhesi Frühstück", "description": "Wie Klassik, mit Käse- und Wurstauswahl", "price": "€ 11,50" },
-        { "name": "Avocado Toast", "description": "Sauerteigbrot, Avocado, Chili, Limette", "price": "€ 9,50" },
-        { "name": "Porridge", "description": "Haferflocken, Beeren, Honig, Mandeln", "price": "€ 6,90" },
-        { "name": "Rührei auf Toast", "description": "Mit Schnittlauch und geröstetem Brot", "price": "€ 7,50" }
+        { "name": "Flädlesuppe", "price": "€ 5,70" },
+        { "name": "Leberspätzlesuppe", "price": "€ 5,70" },
+        { "name": "Gemischter Salat", "description": "Mit Brot", "price": "€ 6,50" },
+        { "name": "Wurstsalat (Schübling)", "description": "Garniert, mit Brot", "price": "€ 10,90" },
+        { "name": "Lumpensalat (Schübling)", "description": "Garniert, mit Brot", "price": "€ 11,90" },
+        { "name": "Fitnesssalat", "description": "Gemischter Salat mit gebratenen Hühnerstreifen, mit Brot", "price": "€ 14,80" }
+      ]
+    },
+    {
+      "title": "Hauptspeisen",
+      "items": [
+        { "name": "Wiener Schnitzel vom Schwein", "description": "Mit Pommes oder gemischtem Salat", "price": "€ 16,90" },
+        { "name": "Cordon Bleu vom Schwein oder Pute", "description": "Mit Pommes oder gem. Salat", "price": "€ 18,90" },
+        { "name": "Grillteller", "description": "Rind, Huhn, Schwein, mit Pommes und Teufelssauce", "price": "€ 22,50" },
+        { "name": "Zack-Zack", "description": "S-Karree, Käse, Zwiebelsauce", "price": "€ 7,90" },
+        { "name": "Zack-Zack \"Hawaii\"", "description": "S-Karree, Ananas, Käse, Teufelssauce, Blattsalat", "price": "€ 8,90" },
+        { "name": "Zack-Zack \"Rhesi\"", "description": "S-Karree, Speck, Käse, Zwiebelsauce, Blattsalat", "price": "€ 9,90" },
+        { "name": "Vegi: Gebackener Camembert", "description": "Mit Preiselbeeren, grüner Salat", "price": "€ 12,90" },
+        { "name": "Vegi: Gebackene Champignons", "description": "Mit Sauce tartare und Salatgarnitur", "price": "€ 12,90" }
+      ]
+    },
+    {
+      "title": "Speisen für den kleinen Hunger",
+      "items": [
+        { "name": "Wienerle", "description": "Mit Senf, Kren und Brot", "price": "€ 6,90" },
+        { "name": "Schinken-Käsetoast", "description": "Mit Salatgarnitur", "price": "€ 6,50" },
+        { "name": "Toast Hawaii", "description": "Mit Salatgarnitur", "price": "€ 8,50" },
+        { "name": "Vegi: Schwarzbrot-Bruschetta", "description": "Mit Tomaten, Basilikum und Pesto", "price": "€ 5,90" }
+      ]
+    },
+    {
+      "title": "Frühstück",
+      "note": "Frühstück: 8:00–11:00 Uhr",
+      "items": [
+        {
+          "name": "Rhesi's süsses Frühstück",
+          "description": "Semmel und Croissant mit Butter, Marmelade, Kaffee od. Espresso od. Cappuccino od. Kakao und 1 Glas Orangensaft",
+          "allergens": ["A", "G", "C"],
+          "price": "€ 10,90"
+        },
+        {
+          "name": "Rhesi's pikantes Frühstück",
+          "description": "2 Semmel oder Croissants mit Butter, Marmelade, Käse, Schinken, Kaffee od. Espresso od. Cappuccino od. Kakao und 1 Glas Orangensaft",
+          "allergens": ["A", "G", "C", "O"],
+          "price": "€ 13,90"
+        },
+        {
+          "name": "Rhesi's Bauernfrühstück",
+          "description": "Toastbrot, Semmel und Croissant, Butter, Marmelade, Rohschinken, Käse, Eier mit Speck, Kaffee od. Espresso od. Cappuccino od. Kakao und 1 Glas Orangensaft",
+          "allergens": ["A", "G", "C", "O"],
+          "price": "€ 15,90"
+        }
+      ],
+      "subsections": [
+        {
+          "title": "Eier",
+          "items": [
+            { "name": "Ham and Eggs", "description": "3 Eier", "allergens": ["C", "O"], "price": "€ 5,90" },
+            { "name": "Rührei mit Speck", "description": "3 Eier", "allergens": ["C", "O"], "price": "€ 5,90" },
+            { "name": "Weichgekochtes Ei", "allergens": ["C"], "price": "€ 1,60" }
+          ]
+        },
+        {
+          "title": "Extras",
+          "items": [
+            { "name": "1 Semmel", "allergens": ["A"], "price": "€ 1,50" },
+            { "name": "1 Croissant", "allergens": ["A", "C", "G"], "price": "€ 2,50" },
+            { "name": "1x Marmelade", "price": "€ 0,50" },
+            { "name": "1x Butter", "allergens": ["G"], "price": "€ 0,50" }
+          ]
+        }
       ]
     },
     {
       "title": "Kaffee & Heißgetränke",
+      "isPlaceholder": true,
       "items": [
         { "name": "Espresso", "description": "Klassisch, kräftig", "price": "€ 2,50" },
         { "name": "Cappuccino", "description": "Mit fein aufgeschäumter Milch", "price": "€ 3,50" },
@@ -23,26 +106,8 @@
       ]
     },
     {
-      "title": "Kuchen & Süßes",
-      "items": [
-        { "name": "Apfelstrudel", "description": "Hausgemacht, mit Vanillesauce", "price": "€ 5,50" },
-        { "name": "Sachertorte", "description": "Klassisch, mit Schlagobers", "price": "€ 5,90" },
-        { "name": "Käsekuchen", "description": "Cremig, mit Beerenspiegel", "price": "€ 5,50" },
-        { "name": "Kaiserschmarrn", "description": "Mit Zwetschkenröster", "price": "€ 8,90" }
-      ]
-    },
-    {
-      "title": "Snacks & Mittagsgerichte",
-      "items": [
-        { "name": "Tagessuppe", "description": "Täglich wechselnd", "price": "€ 4,50" },
-        { "name": "Rhesi Burger", "description": "Rindfleisch, Cheddar, Pommes", "price": "€ 14,50" },
-        { "name": "Vegetarisches Curry", "description": "Saisonales Gemüse, Basmatireis", "price": "€ 13,20" },
-        { "name": "Club Sandwich", "description": "Hühnerbrust, Speck, Ei, Pommes", "price": "€ 12,90" },
-        { "name": "Gemischter Salat", "description": "Mit Hausdressing, dazu Baguette", "price": "€ 9,50" }
-      ]
-    },
-    {
       "title": "Getränke",
+      "isPlaceholder": true,
       "items": [
         { "name": "Mineralwasser", "description": "0,25l / 0,5l", "price": "€ 2,80" },
         { "name": "Apfelsaft gespritzt", "description": "Regional", "price": "€ 3,20" },

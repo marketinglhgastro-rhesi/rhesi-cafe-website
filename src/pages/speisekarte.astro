@@ -6,26 +6,37 @@ import menu from "../data/menu.json";
 
 <BaseLayout
   title="Speisekarte | Rhesi Café & Restaurant"
-  description="Entdecken Sie unsere Speisekarte mit Kaffeespezialitäten, Frühstück, Hauptgerichten und hausgemachten Kuchen."
+  description="Entdecken Sie unsere Speisekarte mit Suppen, Salaten, Hauptspeisen, kleinen Gerichten und Frühstück."
 >
   <section class="bg-white py-16 text-center">
     <div class="mx-auto max-w-3xl px-6">
       <h1 class="font-heading text-4xl font-semibold text-brown">Speisekarte</h1>
       <p class="mt-4 text-espresso/70">
-        Frühstück, Kaffeespezialitäten, hausgemachter Kuchen und herzhafte
-        Gerichte – für jeden Geschmack etwas dabei.
-      </p>
-      <p class="mt-2 text-xs uppercase tracking-wide text-espresso/40">
-        Beispieldaten – die tatsächliche Speisekarte folgt in Kürze
+        Frühstück, herzhafte Gerichte, Suppen und Salate – für jeden
+        Geschmack etwas dabei.
       </p>
     </div>
   </section>
 
-  {menu.categories.map((category, index) => (
-    <MenuCategory
-      title={category.title}
-      items={category.items}
-      reveal={index % 2 === 0 ? "left" : "right"}
-    />
-  ))}
+  {
+    menu.categories.map((category, index) => (
+      <MenuCategory
+        title={category.title}
+        items={category.items}
+        subsections={category.subsections}
+        note={category.note}
+        isPlaceholder={category.isPlaceholder}
+        allergenLegend={category.title === "Frühstück" ? menu.allergenLegend : undefined}
+        reveal={index % 2 === 0 ? "left" : "right"}
+      />
+    ))
+  }
+
+  <section class="mx-auto max-w-3xl px-6 pb-16 text-center">
+    <p class="text-espresso/70">Feine Kuchen finden Sie in unserer Vitrine.</p>
+    <p class="mt-4 text-xs text-espresso/50">
+      Falls Sie eine Speisekarte mit Allergenen ergänzt wünschen, informieren
+      Sie bitte unser Servicepersonal.
+    </p>
+  </section>
 </BaseLayout>
