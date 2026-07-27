@@ -3,6 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Hero from "../components/Hero.astro";
 import Card from "../components/Card.astro";
 import CTAButton from "../components/CTAButton.astro";
+import AtmosphereStrip from "../components/AtmosphereStrip.astro";
 import site from "../data/site.json";
 ---
 
@@ -13,7 +14,7 @@ import site from "../data/site.json";
 -->
 <BaseLayout
   title="Rhesi Café & Restaurant | Lustenau"
-  description="Ihr gemütliches Café mitten in Lustenau: Frühstück, Kaffeespezialitäten, hausgemachter Kuchen und wechselnde Mittagsmenüs im Rheincenter."
+  description="Ihr gemütliches Café mitten in Lustenau: Frühstück, Kaffeespezialitäten, Kuchen und wechselnde Mittagsmenüs im Rheincenter."
 >
   <Hero
     image="/images/hero-fruehstueck-flatlay.webp"
@@ -33,7 +34,7 @@ import site from "../data/site.json";
     <p class="mt-4 text-espresso/80 leading-relaxed">
       Im Rhesi Café &amp; Restaurant im Rheincenter Lustenau erwartet Sie
       eine gemütliche Auszeit vom Alltag: frisch gebrühter Kaffee,
-      hausgemachter Kuchen, ein herzhaftes Frühstück und mittags ein
+      leckerer Kuchen, ein herzhaftes Frühstück und mittags ein
       wechselndes Menü aus der Küche – ganz ohne Hektik.
     </p>
   </section>
@@ -117,6 +118,8 @@ import site from "../data/site.json";
       </div>
     </div>
   </section>
+
+  <AtmosphereStrip />
 
   <section class="bg-terracotta">
     <div data-reveal="up" class="mx-auto max-w-6xl px-6 py-16 text-center">
