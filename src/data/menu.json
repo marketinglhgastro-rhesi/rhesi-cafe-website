@@ -92,29 +92,6 @@
           ]
         }
       ]
-    },
-    {
-      "title": "Kaffee & Heißgetränke",
-      "isPlaceholder": true,
-      "items": [
-        { "name": "Espresso", "description": "Klassisch, kräftig", "price": "€ 2,50" },
-        { "name": "Cappuccino", "description": "Mit fein aufgeschäumter Milch", "price": "€ 3,50" },
-        { "name": "Rhesi Melange", "description": "Hausröstung, mild", "price": "€ 3,80" },
-        { "name": "Latte Macchiato", "description": "Drei Schichten, sanft im Geschmack", "price": "€ 4,20" },
-        { "name": "Heiße Schokolade", "description": "Mit Schlagobers", "price": "€ 4,00" },
-        { "name": "Tee", "description": "Auswahl an losen Tees", "price": "€ 3,50" }
-      ]
-    },
-    {
-      "title": "Getränke",
-      "isPlaceholder": true,
-      "items": [
-        { "name": "Mineralwasser", "description": "0,25l / 0,5l", "price": "€ 2,80" },
-        { "name": "Apfelsaft gespritzt", "description": "Regional", "price": "€ 3,20" },
-        { "name": "Cola", "description": "0,33l", "price": "€ 3,20" },
-        { "name": "Hausgemachte Limonade", "description": "Saisonal wechselnd", "price": "€ 3,80" },
-        { "name": "Bier vom Fass", "description": "0,3l / 0,5l", "price": "€ 3,60" }
-      ]
     }
   ]
 }

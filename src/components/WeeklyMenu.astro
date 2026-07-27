@@ -1,56 +1,42 @@
 ---
-interface MenuOption {
-  name: string;
-  description?: string;
-  price: string;
-}
-
 interface DayMenu {
   day: string;
-  soup?: string;
-  options: MenuOption[];
+  date: string;
+  dish?: string;
+  price?: string;
+  note?: string;
 }
 
 interface Props {
-  week: DayMenu[];
+  days: DayMenu[];
 }
 
-const { week } = Astro.props;
+const { days } = Astro.props;
 ---
 
-<div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+<div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
   {
-    week.map((dayMenu) => (
+    days.map((dayMenu) => (
       <article class="flex flex-col overflow-hidden rounded-2xl bg-white ring-1 ring-brown/10">
         <div class="bg-brown px-5 py-3">
           <h3 class="font-heading text-lg font-semibold text-white">
             {dayMenu.day}
           </h3>
+          <p class="text-xs text-white/60">{dayMenu.date}</p>
         </div>
-        <div class="flex flex-1 flex-col gap-5 p-5">
-          {dayMenu.soup && (
-            <p class="text-sm font-medium text-espresso/70">
-              <span class="text-terracotta">Suppe: </span>
-              {dayMenu.soup}
-            </p>
+        <div class="flex flex-1 flex-col justify-center gap-3 p-5">
+          {dayMenu.dish ? (
+            <>
+              <p class="font-heading font-medium text-espresso">
+                {dayMenu.dish}
+              </p>
+              <p class="text-sm font-semibold text-terracotta">
+                {dayMenu.price}
+              </p>
+            </>
+          ) : (
+            <p class="text-sm italic text-espresso/60">{dayMenu.note}</p>
           )}
-          <ul class="flex flex-1 flex-col gap-4">
-            {dayMenu.options.map((option) => (
-              <li class="border-t border-brown/10 pt-4 first:border-0 first:pt-0">
-                <p class="font-heading font-medium text-espresso">
-                  {option.name}
-                </p>
-                {option.description && (
-                  <p class="mt-1 text-sm text-espresso/60">
-                    {option.description}
-                  </p>
-                )}
-                <p class="mt-2 text-sm font-semibold text-terracotta">
-                  {option.price}
-                </p>
-              </li>
-            ))}
-          </ul>
         </div>
       </article>
     ))

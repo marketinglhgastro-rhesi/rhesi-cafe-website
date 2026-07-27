@@ -1,0 +1,56 @@
+{
+  "_todo": "Wöchentlich aktualisieren, z. B. jeden Montag. Tag/Datum/Gericht in \"days\" für die neue Woche ersetzen. Diese Einträge (Woche vom 20.–25.7.) sind Beispieldaten nur zur Veranschaulichung des Formats.",
+  "vegiGerichteDerWoche": [
+    {
+      "name": "Hausgemachte Rösti",
+      "description": "Mit Gemüse und zwei Spiegeleiern",
+      "price": "€ 10,70"
+    },
+    {
+      "name": "Griechischer Bauernsalat",
+      "description": "Mit Tomaten, Paprika, Gurken, roten Zwiebeln, Fetakäse",
+      "price": "€ 10,70"
+    }
+  ],
+  "supplement": {
+    "name": "Tagessuppe oder gemischter Salat",
+    "price": "€ 2,00"
+  },
+  "days": [
+    {
+      "day": "Montag",
+      "date": "20.7.",
+      "dish": "Gegr. Schweinkarree mit Kroketten und Gemüse",
+      "price": "€ 10,70"
+    },
+    {
+      "day": "Dienstag",
+      "date": "21.7.",
+      "dish": "Wiener Schnitzel vom Schwein mit Pommes",
+      "price": "€ 10,70"
+    },
+    {
+      "day": "Mittwoch",
+      "date": "22.7.",
+      "dish": "Champignon-Geschnetzeltes von der Pute mit Butterspätzle",
+      "price": "€ 10,70"
+    },
+    {
+      "day": "Donnerstag",
+      "date": "23.7.",
+      "dish": "Rhesi-Karreespieß mit Letschogemüse und Reis",
+      "price": "€ 10,70"
+    },
+    {
+      "day": "Freitag",
+      "date": "24.7.",
+      "dish": "Kässpätzle mit hausgemachtem Kartoffelsalat und Röstzwiebeln",
+      "price": "€ 10,70"
+    },
+    {
+      "day": "Samstag",
+      "date": "25.7.",
+      "note": "Gerne verwöhnen wir Sie mit Speisen aus unserer normalen Karte!"
+    }
+  ]
+}
