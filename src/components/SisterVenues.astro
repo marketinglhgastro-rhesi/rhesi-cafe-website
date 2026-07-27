@@ -1,0 +1,85 @@
+---
+// TODO: Platzhalter-Logoflächen. Sobald echte Logos vorliegen, unter
+// public/images/betriebe/[name].jpg ablegen und den Platzhalter-Div unten
+// durch <img src={`/images/betriebe/${venue.slug}.jpg`} alt={venue.name} /> ersetzen.
+const venues = [
+  {
+    name: "Rio",
+    subtitle: "Café & Cocktailbar, Dornbirn",
+    url: "https://www.rio-dornbirn.at",
+  },
+  {
+    name: "TacoTaco",
+    subtitle: "Food & Drinks, Lustenau",
+    url: "https://tacotaco.at",
+  },
+  {
+    name: "Mr. French",
+    subtitle: "Bistro & Bar, Dornbirn",
+    url: "https://mrfrench.at",
+  },
+  {
+    name: "Schmugglar",
+    subtitle: "Restaurant, Bar, Café, Lustenau",
+    url: "https://schmugglar.at",
+  },
+  {
+    name: "Piazza Azzurra & iTaly",
+    subtitle: "Café Bar",
+    url: "https://azzurra.at",
+  },
+];
+---
+
+<section class="bg-white py-20">
+  <div class="mx-auto max-w-5xl px-6 text-center">
+    <h2 data-reveal="up" class="font-heading text-3xl font-semibold text-brown">
+      Weitere Betriebe
+    </h2>
+    <p data-reveal="up" class="mx-auto mt-4 max-w-2xl text-espresso/70 leading-relaxed">
+      Neben dem Rhesi betreiben wir weitere Lokale in der Region, die zum
+      Genießen, Verweilen und Entdecken einladen. Ob Café, Bar oder
+      kulinarischer Hotspot – wir glauben an Gastfreundschaft mit Charakter
+      und Atmosphäre.
+    </p>
+
+    <div class="mt-12 grid grid-cols-1 gap-6 text-left sm:grid-cols-2 lg:grid-cols-3">
+      {
+        venues.map((venue, index) => {
+          const card = (
+            <>
+              <div class="flex h-20 w-20 items-center justify-center rounded-xl bg-cream text-2xl font-semibold text-brown/40">
+                {venue.name.charAt(0)}
+              </div>
+              <p class="mt-4 font-heading text-lg font-semibold text-brown">
+                {venue.name}
+              </p>
+              <p class="mt-1 text-sm text-espresso/60">{venue.subtitle}</p>
+            </>
+          );
+
+          const cardClass =
+            "group flex h-full flex-col items-start rounded-2xl border border-brown/10 p-6 transition-shadow";
+          const style = `transition-delay: ${index * 80}ms`;
+
+          return venue.url ? (
+            <a
+              data-reveal="up"
+              style={style}
+              href={venue.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class={`${cardClass} hover:shadow-md hover:border-brown/20`}
+            >
+              {card}
+            </a>
+          ) : (
+            <div data-reveal="up" style={style} class={cardClass}>
+              {card}
+            </div>
+          );
+        })
+      }
+    </div>
+  </div>
+</section>
