@@ -1,12 +1,36 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import MenuCategory from "../components/MenuCategory.astro";
-import menu from "../data/menu.json";
+import rawMenu from "../data/menu.json";
+
+interface MenuItem {
+  name: string;
+  description?: string;
+  price: string;
+  allergens?: string[];
+}
+
+interface MenuCategoryData {
+  title: string;
+  note?: string;
+  isPlaceholder?: boolean;
+  items: MenuItem[];
+  subsections?: { title: string; items: MenuItem[] }[];
+}
+
+interface MenuData {
+  categories: MenuCategoryData[];
+  allergenLegend: Record<string, string>;
+}
+
+const menu = rawMenu as MenuData;
 ---
 
+<!-- TODO: /og/og-speisekarte.jpg noch erstellen (1200x630) -->
 <BaseLayout
-  title="Speisekarte | Rhesi Café & Restaurant"
-  description="Entdecken Sie unsere Speisekarte mit Suppen, Salaten, Hauptspeisen, kleinen Gerichten und Frühstück."
+  title="Speisekarte | Rhesi Café & Restaurant Lustenau"
+  description="Frühstück, Suppen, Hauptspeisen und mehr – die Speisekarte des Rhesi Café & Restaurant im Rheincenter Lustenau."
+  ogImage="/og/og-speisekarte.jpg"
 >
   <section class="bg-white py-16 text-center">
     <div class="mx-auto max-w-3xl px-6">
@@ -34,7 +58,7 @@ import menu from "../data/menu.json";
 
   <section class="mx-auto max-w-3xl px-6 pb-16 text-center">
     <p class="text-espresso/70">Feine Kuchen finden Sie in unserer Vitrine.</p>
-    <p class="mt-4 text-xs text-espresso/50">
+    <p class="mt-4 text-xs text-espresso/70">
       Falls Sie eine Speisekarte mit Allergenen ergänzt wünschen, informieren
       Sie bitte unser Servicepersonal.
     </p>

@@ -7,7 +7,7 @@ const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(site.address.
 <div class="grid gap-10 md:grid-cols-2">
   <div data-reveal="left" class="space-y-6">
     <div>
-      <h3 class="font-heading text-lg font-semibold text-brown">Adresse</h3>
+      <h2 class="font-heading text-lg font-semibold text-brown">Adresse</h2>
       <p class="mt-1 text-sm text-espresso/80">
         {site.name}<br />
         {site.address.street}, {site.address.addressExtra}<br />
@@ -15,14 +15,14 @@ const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(site.address.
       </p>
     </div>
     <div>
-      <h3 class="font-heading text-lg font-semibold text-brown">Kontakt</h3>
+      <h2 class="font-heading text-lg font-semibold text-brown">Kontakt</h2>
       <p class="mt-1 text-sm text-espresso/80">
         Tel: <a href={site.phoneHref} class="hover:text-terracotta">{site.phone}</a><br />
         E-Mail: <a href={`mailto:${site.email}`} class="hover:text-terracotta">{site.email}</a>
       </p>
     </div>
     <div>
-      <h3 class="font-heading text-lg font-semibold text-brown">Öffnungszeiten</h3>
+      <h2 class="font-heading text-lg font-semibold text-brown">Öffnungszeiten</h2>
       <table class="mt-2 w-full max-w-xs text-sm text-espresso/80">
         <tbody>
           {

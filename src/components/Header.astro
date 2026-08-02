@@ -4,9 +4,9 @@ import CTAButton from "./CTAButton.astro";
 
 const navItems = [
   { label: "Startseite", href: "/" },
-  { label: "Über uns", href: "/ueber-uns" },
-  { label: "Speisekarte", href: "/speisekarte" },
   { label: "Mittagsmenüs", href: "/mittagsmenues" },
+  { label: "Speisekarte", href: "/speisekarte" },
+  { label: "Über uns", href: "/ueber-uns" },
   { label: "Kontakt", href: "/kontakt" },
 ];
 
@@ -29,8 +29,8 @@ const isActive = (href: string) =>
               <a
                 href={item.href}
                 aria-current={isActive(item.href) ? "page" : undefined}
-                class={`transition-colors hover:text-terracotta ${
-                  isActive(item.href) ? "text-terracotta" : ""
+                class={`transition-colors hover:text-terracotta-dark ${
+                  isActive(item.href) ? "text-terracotta-dark" : ""
                 }`}
               >
                 {item.label}
@@ -68,8 +68,8 @@ const isActive = (href: string) =>
             <a
               href={item.href}
               aria-current={isActive(item.href) ? "page" : undefined}
-              class={`block rounded-lg px-2 py-3 transition-colors hover:bg-cream hover:text-terracotta ${
-                isActive(item.href) ? "text-terracotta" : ""
+              class={`block rounded-lg px-2 py-3 transition-colors hover:bg-cream hover:text-terracotta-dark ${
+                isActive(item.href) ? "text-terracotta-dark" : ""
               }`}
             >
               {item.label}

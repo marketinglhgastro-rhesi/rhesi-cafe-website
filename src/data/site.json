@@ -1,5 +1,7 @@
 {
   "name": "Rhesi Café & Restaurant",
+  "servesCuisine": ["Café", "Österreichisch", "Frühstück"],
+  "priceRange": "€€",
   "address": {
     "street": "Kapellenstraße 1",
     "addressExtra": "im Rheincenter",

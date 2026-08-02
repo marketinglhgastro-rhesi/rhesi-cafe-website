@@ -7,7 +7,8 @@ interface Props {
   ogImage?: string;
 }
 
-const { title, description, ogImage = "/images/og-default.jpg" } = Astro.props;
+// TODO: /og/og-default.jpg noch erstellen (1200x630) – Fallback für Seiten ohne eigenes ogImage.
+const { title, description, ogImage = "/og/og-default.jpg" } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const ogImageURL = new URL(ogImage, Astro.site);
@@ -49,6 +50,8 @@ const structuredData = {
   },
   url: Astro.site?.toString(),
   sameAs: [site.social.facebook, site.social.instagram],
+  servesCuisine: site.servesCuisine,
+  priceRange: site.priceRange,
   openingHoursSpecification,
 };
 ---

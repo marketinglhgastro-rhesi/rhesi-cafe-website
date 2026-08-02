@@ -19,9 +19,11 @@ import unsereGeschichte from "../assets/images/unsere-geschichte.jpg";
   Unsplash-Stockfotos als Platzhalter. Vor dem Launch durch eigene
   Café-Fotos ersetzen.
 -->
+<!-- TODO: /og/og-home.jpg noch erstellen (1200x630) -->
 <BaseLayout
-  title="Rhesi Café & Restaurant | Lustenau"
-  description="Ihr gemütliches Café mitten in Lustenau: Frühstück, Kaffeespezialitäten, Kuchen und wechselnde Mittagsmenüs im Rheincenter."
+  title="Rhesi Café & Restaurant Lustenau | Frühstück, Kaffee & mehr"
+  description="Gemütliches Café & Restaurant im Rheincenter Lustenau: Frühstück, Kaffeespezialitäten, Kuchen und wechselndes Mittagsmenü Mo–Sa."
+  ogImage="/og/og-home.jpg"
 >
   <Hero
     image={heroFruehstueck}
@@ -110,6 +112,7 @@ import unsereGeschichte from "../assets/images/unsere-geschichte.jpg";
         format="webp"
         quality={80}
         loading="lazy"
+        decoding="async"
         class="w-full rounded-2xl object-cover"
       />
       <div data-reveal="right">
@@ -140,8 +143,8 @@ import unsereGeschichte from "../assets/images/unsere-geschichte.jpg";
         {site.openingHoursShort.map((entry) => `${entry.days} ${entry.hours}`).join(" · ")}
       </p>
       <div class="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
-        <CTAButton href="/speisekarte" variant="secondary" onDark>
-          Speisekarte ansehen
+        <CTAButton href="/mittagsmenues" variant="secondary" onDark>
+          Mittagsmenü ansehen
         </CTAButton>
         <CTAButton href="/kontakt" variant="secondary" onDark>
           Kontakt & Anfahrt

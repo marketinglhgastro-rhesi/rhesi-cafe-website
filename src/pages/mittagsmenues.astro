@@ -3,12 +3,59 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import WeeklyMenu from "../components/WeeklyMenu.astro";
 import site from "../data/site.json";
 import lunch from "../data/mittagsmenue.json";
+
+// Schema.org Menu/MenuSection JSON-LD so Google can potentially surface the
+// daily lunch menu as a rich result. Prices are parsed from "€ 10,70" style
+// strings in mittagsmenue.json into plain numbers for the Offer type.
+const parsePrice = (price: string) => price.replace("€", "").replace(",", ".").trim();
+
+const menuJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Menu",
+  name: "Rhesi Mittagsmenü",
+  description: `Wechselndes Mittagsmenü ${site.lunchMenu.days}, ${site.lunchMenu.hours}`,
+  hasMenuSection: [
+    {
+      "@type": "MenuSection",
+      name: "Vegi-Gerichte der Woche",
+      hasMenuItem: lunch.vegiGerichteDerWoche.map((item) => ({
+        "@type": "MenuItem",
+        name: item.name,
+        description: item.description,
+        offers: {
+          "@type": "Offer",
+          price: parsePrice(item.price),
+          priceCurrency: "EUR",
+        },
+      })),
+    },
+    {
+      "@type": "MenuSection",
+      name: "Tagesmenüs",
+      hasMenuItem: lunch.days
+        .filter((day) => day.dish)
+        .map((day) => ({
+          "@type": "MenuItem",
+          name: `${day.day}: ${day.dish}`,
+          offers: {
+            "@type": "Offer",
+            price: parsePrice(day.price as string),
+            priceCurrency: "EUR",
+          },
+        })),
+    },
+  ],
+};
 ---
 
 <BaseLayout
-  title="Mittagsmenüs | Rhesi Café & Restaurant"
-  description={`Unsere wechselnden Mittagsmenüs ${site.lunchMenu.days}, ${site.lunchMenu.hours} – täglich frisch gekocht im Rhesi Café & Restaurant in Lustenau.`}
+  title="Mittagsmenü Lustenau – Mo–Fr 11–14 Uhr | Rhesi Café"
+  description={`Täglich wechselndes Mittagsmenü in Lustenau: Suppe oder Salat, Hauptgericht und mehr – ${site.lunchMenu.days}, ${site.lunchMenu.hours} im Rhesi Café & Restaurant.`}
+  ogImage="/og/og-mittagsmenue.jpg"
 >
+  <!-- TODO: /og/og-mittagsmenue.jpg noch erstellen (1200x630, mit Wochenmenü-Optik) -->
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(menuJsonLd)} />
+
   <section class="bg-white py-16 text-center">
     <div class="mx-auto max-w-3xl px-6">
       <h1 class="font-heading text-4xl font-semibold text-brown">
@@ -19,7 +66,6 @@ import lunch from "../data/mittagsmenue.json";
         Mittagsmenü – frisch gekocht aus regionalen Zutaten. Änderungen
         vorbehalten.
       </p>
-      
     </div>
   </section>
 
@@ -27,7 +73,7 @@ import lunch from "../data/mittagsmenue.json";
     <h2 class="font-heading text-2xl font-semibold text-brown sm:text-3xl">
       Vegi-Gerichte der Woche
     </h2>
-    <p class="mt-1 text-sm text-espresso/60">Täglich verfügbar</p>
+    <p class="mt-1 text-sm text-espresso/70">Täglich verfügbar</p>
     <ul class="mt-6 space-y-6">
       {
         lunch.vegiGerichteDerWoche.map((item) => (
@@ -37,12 +83,12 @@ import lunch from "../data/mittagsmenue.json";
                 {item.name}
               </span>
               <span class="flex-1 border-b border-dotted border-brown/30" />
-              <span class="font-heading font-medium text-terracotta">
+              <span class="font-heading font-medium text-terracotta-dark">
                 {item.price}
               </span>
             </div>
             {item.description && (
-              <p class="mt-1 text-sm text-espresso/60">{item.description}</p>
+              <p class="mt-1 text-sm text-espresso/70">{item.description}</p>
             )}
           </li>
         ))
@@ -54,7 +100,7 @@ import lunch from "../data/mittagsmenue.json";
     <h2 class="font-heading text-2xl font-semibold text-brown sm:text-3xl">
       Tagesmenüs
     </h2>
-    <p class="mt-2 text-sm text-espresso/60">
+    <p class="mt-2 text-sm text-espresso/70">
       Jeweils zusätzlich: {lunch.supplement.name} – {lunch.supplement.price}
     </p>
     <div class="mt-8">
@@ -66,7 +112,7 @@ import lunch from "../data/mittagsmenue.json";
     <p class="text-espresso/70">
       Mittagsmenüs erhältlich {site.lunchMenu.days}, {site.lunchMenu.hours}.
     </p>
-    <p class="mt-4 text-xs text-espresso/50">
+    <p class="mt-4 text-xs text-espresso/70">
       Falls Sie eine Speisekarte mit Allergenen ergänzt wünschen, informieren
       Sie bitte unser Servicepersonal.
     </p>

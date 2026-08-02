@@ -17,6 +17,7 @@
   --color-brown: #4a3428;
   --color-cream: #f5ede4;
   --color-terracotta: #c87b4a;
+  --color-terracotta-dark: #a35f37;
   --color-espresso: #241812;
   --color-white: #fffdfb;
 
@@ -70,4 +71,29 @@ h6 {
     transform: none;
     transition: none;
   }
+}
+
+/* Keyboard focus: visible on both light and dark section backgrounds */
+:focus-visible {
+  outline: 2px solid var(--color-terracotta);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Skip link for keyboard users to bypass the header/nav */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  background-color: var(--color-white);
+  color: var(--color-brown);
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
 }
