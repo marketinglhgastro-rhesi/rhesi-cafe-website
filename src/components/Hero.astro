@@ -1,4 +1,6 @@
 ---
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
 import CTAButton from "./CTAButton.astro";
 
 interface CTA {
@@ -8,7 +10,7 @@ interface CTA {
 }
 
 interface Props {
-  image: string;
+  image: ImageMetadata;
   imageAlt: string;
   headline: string;
   subline?: string;
@@ -20,9 +22,14 @@ const { image, imageAlt, headline, subline, ctas = [] } = Astro.props;
 
 <!-- TODO: Hero-Foto ist ein Unsplash-Platzhalter. Vor Launch durch ein eigenes Rhesi-Foto ersetzen. -->
 <section class="relative flex min-h-[60vh] items-center overflow-hidden md:min-h-[85vh]">
-  <img
+  <Image
     src={image}
     alt={imageAlt}
+    width={1920}
+    height={1005}
+    format="webp"
+    quality={80}
+    loading="eager"
     class="absolute inset-0 h-full w-full object-cover"
   />
 

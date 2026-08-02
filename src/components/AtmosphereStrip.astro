@@ -1,10 +1,16 @@
 ---
+import { Image } from "astro:assets";
 // TODO: Fotos sind Unsplash-Platzhalter. Vor Launch durch eigene Rhesi-Fotos ersetzen.
+import atmosphaere1 from "../assets/images/atmosphaere-1.jpg";
+import atmosphaere2 from "../assets/images/atmosphaere-2.jpg";
+import atmosphaere3 from "../assets/images/atmosphaere-3.jpg";
+import atmosphaere4 from "../assets/images/atmosphaere-4.jpg";
+
 const photos = [
-  { src: "/images/atmosphaere-1.jpg", alt: "Gemütliche Sitzecke im Rhesi" },
-  { src: "/images/atmosphaere-2.jpg", alt: "Gastraum im Rhesi" },
-  { src: "/images/atmosphaere-3.jpg", alt: "Bar-Bereich im Rhesi" },
-  { src: "/images/atmosphaere-4.jpg", alt: "Gemütlicher Fensterplatz im Rhesi" },
+  { src: atmosphaere1, alt: "Gemütliche Sitzecke im Rhesi" },
+  { src: atmosphaere2, alt: "Gastraum im Rhesi" },
+  { src: atmosphaere3, alt: "Bar-Bereich im Rhesi" },
+  { src: atmosphaere4, alt: "Gemütlicher Fensterplatz im Rhesi" },
 ];
 ---
 
@@ -27,9 +33,13 @@ const photos = [
             style={`transition-delay: ${index * 100}ms`}
             class="group h-64 overflow-hidden rounded-2xl shadow-sm ring-1 ring-brown/10"
           >
-            <img
+            <Image
               src={photo.src}
               alt={photo.alt}
+              width={700}
+              height={560}
+              format="webp"
+              quality={80}
               loading="lazy"
               class="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
             />

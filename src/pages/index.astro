@@ -5,6 +5,11 @@ import Card from "../components/Card.astro";
 import CTAButton from "../components/CTAButton.astro";
 import AtmosphereStrip from "../components/AtmosphereStrip.astro";
 import site from "../data/site.json";
+import heroFruehstueck from "../assets/images/hero-fruehstueck-flatlay.webp";
+import cardSpeisekarte from "../assets/images/card-speisekarte.webp";
+import cardKuchen from "../assets/images/card-kuchen.webp";
+import cardUeberUns from "../assets/images/card-ueber-uns.webp";
+import cardMittagsmenue from "../assets/images/card-mittagsmenue.webp";
 ---
 
 <!--
@@ -17,7 +22,7 @@ import site from "../data/site.json";
   description="Ihr gemütliches Café mitten in Lustenau: Frühstück, Kaffeespezialitäten, Kuchen und wechselnde Mittagsmenüs im Rheincenter."
 >
   <Hero
-    image="/images/hero-fruehstueck-flatlay.webp"
+    image={heroFruehstueck}
     imageAlt="Gedeckter Frühstückstisch mit frischem Obst, Pancakes und Kaffee bei Rhesi"
     headline="Ihr Café mitten in Lustenau"
     subline="Frühstück, leckerer Kuchen, Kaffeespezialitäten und wechselnde Mittagsmenüs – mitten im Rheincenter, von Montag bis Samstag für Sie da."
@@ -45,7 +50,7 @@ import site from "../data/site.json";
     </h2>
     <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
       <Card
-        image="/images/hero-fruehstueck-flatlay.webp"
+        image={heroFruehstueck}
         imageAlt="Frühstückstisch mit frischem Obst und Pancakes bei Rhesi"
         title="Frühstück"
         text="Von der Klassik bis zum Avocado Toast – starten Sie entspannt in den Tag."
@@ -54,7 +59,7 @@ import site from "../data/site.json";
         reveal="left"
       />
       <Card
-        image="/images/card-speisekarte.webp"
+        image={cardSpeisekarte}
         imageAlt="Latte Art bei Rhesi"
         title="Kaffee"
         text="Espresso, Cappuccino & Co. – Kaffeespezialitäten aus unserer Hausröstung."
@@ -63,7 +68,7 @@ import site from "../data/site.json";
         reveal="up"
       />
       <Card
-        image="/images/card-kuchen.webp"
+        image={cardKuchen}
         imageAlt="Auswahl an hausgemachten Torten und Kuchen bei Rhesi"
         title="Kuchen"
         text="Hausgemachte Torten und Klassiker wie Apfelstrudel und Sachertorte."
@@ -72,7 +77,7 @@ import site from "../data/site.json";
         reveal="right"
       />
       <Card
-        image="/images/card-ueber-uns.webp"
+        image={cardUeberUns}
         imageAlt="Gemütliche Terrassen-Atmosphäre im Rhesi"
         title="Terrasse"
         text="Gemütliche Atmosphäre drinnen wie draußen – ideal zum Verweilen."
@@ -81,7 +86,7 @@ import site from "../data/site.json";
         reveal="left"
       />
       <Card
-        image="/images/card-mittagsmenue.webp"
+        image={cardMittagsmenue}
         imageAlt="Herzhaftes Mittagsgericht im Rhesi"
         title="Mittagsmenü"
         text={`${site.lunchMenu.days} servieren wir ein wechselndes Mittagsmenü mit Suppe und Hauptspeise.`}
