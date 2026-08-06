@@ -1,38 +1,94 @@
 ---
+import { Image } from "astro:assets";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import SisterVenues from "../components/SisterVenues.astro";
+import atmosphaereGastraum from "../assets/images/atmosphaere-2.png";
 ---
 
 <BaseLayout
   title="Über uns | Rhesi Café & Restaurant Lustenau"
   description="Erfahren Sie mehr über das Rhesi Café & Restaurant im Rheincenter Lustenau – unsere Geschichte und was uns wichtig ist."
 >
-  <section class="mx-auto max-w-4xl px-6 py-20">
-    <h1 class="font-heading text-4xl font-semibold text-brown">Über uns</h1>
-    <p class="mt-6 text-lg text-espresso/90 leading-relaxed sm:text-xl">
-      Mitten im Rheincenter Lustenau eröffnete Gastronom Marcel Lerch im
-      Sommer 2017 nach zweimonatigem Umbau das Rhesi Café &amp; Restaurant –
-      nach Schmugglar, Piazza Azzurra und iTaly sein viertes Lokal in
-      Lustenau. Der Name ist eine Anlehnung an die Rheinregulierung, die die
-      Region geprägt hat.
-    </p>
-    <p class="mt-6 text-espresso/80 leading-relaxed">
-      Das Café ist geprägt von hellen Pastelltönen, romantischen Mustern und
-      einem leicht barocken Design, ergänzt durch einen Gastgarten. Das
-      Angebot reicht von Frühstück über wechselnde Mittagsmenüs bis zu
-      hausgemachten Torten und Pralinen aus der eigenen Konditorei.
-    </p>
+  <section class="mx-auto grid max-w-6xl items-center gap-12 px-6 py-20 md:grid-cols-2">
+    <div data-reveal="left">
+      <h1 class="font-heading text-4xl font-semibold text-brown">Über uns</h1>
+      <p class="mt-6 border-l-2 border-terracotta pl-4 text-xl text-espresso/90 leading-relaxed">
+        Mitten im Rheincenter Lustenau eröffnete Gastronom Marcel Lerch im
+        Sommer 2017 nach zweimonatigem Umbau das Rhesi Café &amp; Restaurant –
+        nach Schmugglar, Piazza Azzurra und iTaly sein viertes Lokal in
+        Lustenau. Der Name ist eine Anlehnung an die Rheinregulierung, die die
+        Region geprägt hat.
+      </p>
+      <p class="mt-6 text-espresso/80 leading-relaxed">
+        Das Café ist geprägt von hellen Pastelltönen, romantischen Mustern und
+        einem leicht barocken Design, ergänzt durch einen Gastgarten. Das
+        Angebot reicht von Frühstück über wechselnde Mittagsmenüs bis zu
+        hausgemachten Torten und Pralinen aus der eigenen Konditorei.
+      </p>
+    </div>
+    <Image
+      data-reveal="right"
+      src={atmosphaereGastraum}
+      alt="Gastraum des Rhesi Café & Restaurant mit hellen Pastelltönen und Sitzecken"
+      width={700}
+      height={560}
+      format="webp"
+      quality={80}
+      loading="lazy"
+      decoding="async"
+      class="h-72 w-full rounded-2xl object-cover md:h-full"
+    />
   </section>
 
-  <section class="mx-auto max-w-4xl px-6 py-20">
+  <section class="mx-auto max-w-4xl px-6 py-20 text-center">
     <h2 class="font-heading text-3xl font-semibold text-brown">Philosophie</h2>
-    <p class="mt-4 text-espresso/80 leading-relaxed">
-      Bei Rhesi setzen wir auf Hausgemachtes: Kuchen und Torten aus der
-      eigenen Konditorei, ein wechselndes Mittagsmenü und
-      Frühstücksvariationen. Im Mittelpunkt steht ein Ort zum Verweilen – ob
-      am Vormittag bei einem Kaffee, in der Mittagspause oder bei einem Stück
-      Kuchen am Nachmittag.
-    </p>
+
+    <div class="mt-12 grid gap-6 sm:grid-cols-3">
+      <div data-reveal="up" class="rounded-2xl border border-brown/10 p-6 text-center">
+        <div class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-cream text-terracotta-dark">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6">
+            <path d="M4 21v-7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v7" />
+            <path d="M2 21h20" />
+            <path d="M7 12v-2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2" />
+            <path d="M12 8V5" />
+            <circle cx="12" cy="3.2" r="1.2" />
+          </svg>
+        </div>
+        <p class="mt-4 font-heading text-lg font-semibold text-brown">Hausgemacht</p>
+        <p class="mt-2 text-sm text-espresso/80 leading-relaxed">
+          Kuchen, Torten und Pralinen aus unserer eigenen Konditorei.
+        </p>
+      </div>
+
+      <div data-reveal="up" style="transition-delay: 80ms" class="rounded-2xl border border-brown/10 p-6 text-center">
+        <div class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-cream text-terracotta-dark">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6">
+            <rect x="3" y="4" width="18" height="18" rx="2" />
+            <path d="M16 2v4M8 2v4M3 10h18" />
+          </svg>
+        </div>
+        <p class="mt-4 font-heading text-lg font-semibold text-brown">Wechselndes Menü</p>
+        <p class="mt-2 text-sm text-espresso/80 leading-relaxed">
+          Mittags gibt es täglich ein frisch gekochtes, wechselndes
+          Mittagsmenü.
+        </p>
+      </div>
+
+      <div data-reveal="up" style="transition-delay: 160ms" class="rounded-2xl border border-brown/10 p-6 text-center">
+        <div class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-cream text-terracotta-dark">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6">
+            <path d="M4 13a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3H4z" />
+            <path d="M4 16v3M20 16v3" />
+            <path d="M4 13V9a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2v3M15 13V9a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2v4" />
+          </svg>
+        </div>
+        <p class="mt-4 font-heading text-lg font-semibold text-brown">Zum Verweilen</p>
+        <p class="mt-2 text-sm text-espresso/80 leading-relaxed">
+          Ob Kaffee am Vormittag oder Kuchen am Nachmittag – bei uns lässt
+          sich's aushalten.
+        </p>
+      </div>
+    </div>
   </section>
 
   <SisterVenues />
