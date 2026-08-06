@@ -1,32 +1,46 @@
 ---
-// TODO: Platzhalter-Logoflächen. Sobald echte Logos vorliegen, unter
-// public/images/betriebe/[name].jpg ablegen und den Platzhalter-Div unten
-// durch <img src={`/images/betriebe/${venue.slug}.jpg`} alt={venue.name} /> ersetzen.
+// Logos liegen unter public/images/betriebe/[slug].svg (bevorzugt, verlustfrei
+// skalierbar) oder als PNG mit transparentem Hintergrund ab. KEIN JPG – JPG
+// unterstützt keine Transparenz und würde auf der weißen Card als Rechteck
+// mit Hintergrundfarbe auffallen. Sobald ein echtes Logo vorliegt, Datei
+// unter dem jeweiligen Slug ablegen und den Pfad im logo-Feld eintragen,
+// z.B. logo: "/images/betriebe/rio.svg". Bis dahin bleibt logo: null und
+// die Karte zeigt den Anfangsbuchstaben-Platzhalter.
 const venues = [
   {
     name: "Rio",
+    slug: "rio",
     subtitle: "Café & Cocktailbar, Dornbirn",
     url: "https://www.rio-dornbirn.at",
+    logo: null,
   },
   {
     name: "TacoTaco",
+    slug: "tacotaco",
     subtitle: "Food & Drinks, Lustenau",
     url: "https://tacotaco.at",
+    logo: null,
   },
   {
     name: "Mr. French",
+    slug: "mr-french",
     subtitle: "Bistro & Bar, Dornbirn",
     url: "https://mrfrench.at",
+    logo: null,
   },
   {
     name: "Schmugglar",
+    slug: "schmugglar",
     subtitle: "Restaurant, Bar, Café, Lustenau",
     url: "https://schmugglar.at",
+    logo: null,
   },
   {
     name: "Piazza Azzurra & iTaly",
+    slug: "piazza-azzurra-italy",
     subtitle: "Pizzeria, Café & Bar",
     url: "https://azzurra.at",
+    logo: null,
   },
 ];
 ---
@@ -48,9 +62,18 @@ const venues = [
         venues.map((venue, index) => {
           const card = (
             <>
-              <div class="flex h-20 w-20 items-center justify-center rounded-xl bg-cream text-2xl font-semibold text-brown/40">
-                {venue.name.charAt(0)}
-              </div>
+              {venue.logo ? (
+                <img
+                  src={venue.logo}
+                  alt={`${venue.name} Logo`}
+                  loading="lazy"
+                  class="h-16 max-w-[140px] object-contain"
+                />
+              ) : (
+                <div class="flex h-20 w-20 items-center justify-center rounded-xl bg-cream text-2xl font-semibold text-brown/40">
+                  {venue.name.charAt(0)}
+                </div>
+              )}
               <p class="mt-4 font-heading text-lg font-semibold text-brown">
                 {venue.name}
               </p>
