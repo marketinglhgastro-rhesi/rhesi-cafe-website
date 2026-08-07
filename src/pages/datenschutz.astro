@@ -1,6 +1,10 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import site from "../data/site.json";
+
+// Firmenname (site.legal.companyName) aus Drittquellen recherchiert, Stand
+// 2026-08-07 – vor Launch gegen aktuellen Firmenbuchauszug oder mit dem
+// Steuerberater verifizieren (siehe auch impressum.astro).
 ---
 
 <BaseLayout
@@ -20,7 +24,7 @@ import site from "../data/site.json";
         Verantwortlicher
       </h2>
       <p>
-        {site.name}<br />
+        {site.legal.companyName} (Betreiber von {site.name})<br />
         {site.address.street}, {site.address.addressExtra}<br />
         {site.address.postalCode} {site.address.city}, {site.address.country}<br />
         E-Mail: {site.email}

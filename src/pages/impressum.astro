@@ -1,6 +1,11 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import site from "../data/site.json";
+
+// Daten aus Drittquellen (WKO Firmen A-Z, Creditreform) recherchiert, Stand
+// 2026-08-07 – vor Launch gegen aktuellen Firmenbuchauszug oder mit dem
+// Steuerberater verifizieren.
+const legal = site.legal;
 ---
 
 <BaseLayout
@@ -9,21 +14,86 @@ import site from "../data/site.json";
 >
   <section class="mx-auto max-w-3xl px-6 py-20">
     <h1 class="font-heading text-4xl font-semibold text-brown">Impressum</h1>
-    <div class="mt-6 space-y-2 text-espresso/80 leading-relaxed">
-      <p>{site.name}</p>
-      <p>
-        {site.address.street}, {site.address.addressExtra}<br />
-        {site.address.postalCode} {site.address.city}, {site.address.country}
-      </p>
-      <p>Tel: {site.phone}</p>
-      <p>E-Mail: {site.email}</p>
-      <p class="pt-4 text-xs font-semibold uppercase tracking-wide text-terracotta-dark">
-        muss noch anpassen
-      </p>
-      <p>
-        Platzhaltertext: Firmenbuchnummer, UID-Nummer, Rechtsform,
-        Gewerbebehörde und Aufsichtsbehörde etc....
-      </p>
+
+    <div class="mt-8 space-y-8 text-espresso/80 leading-relaxed">
+      <div>
+        <h2 class="font-heading text-xl font-semibold text-brown">
+          Diensteanbieter / Betreiber
+        </h2>
+        <p class="mt-2">
+          {legal.companyName}<br />
+          {legal.legalForm}
+        </p>
+        <p class="mt-2">
+          Sitz der Gesellschaft:<br />
+          {legal.registeredSeat.street}<br />
+          {legal.registeredSeat.postalCode} {legal.registeredSeat.city}, {legal.registeredSeat.country}
+        </p>
+        <p class="mt-2">
+          Betriebsstätte {site.name}:<br />
+          {site.address.street}, {site.address.addressExtra}<br />
+          {site.address.postalCode} {site.address.city}, {site.address.country}
+        </p>
+      </div>
+
+      <div>
+        <h2 class="font-heading text-xl font-semibold text-brown">
+          Firmenbuchdaten
+        </h2>
+        <p class="mt-2">
+          Firmenbuchnummer: {legal.companyRegisterNumber}<br />
+          Firmenbuchgericht: {legal.companyRegisterCourt}<br />
+          UID-Nummer: {legal.vatId}
+        </p>
+      </div>
+
+      <div>
+        <h2 class="font-heading text-xl font-semibold text-brown">
+          Geschäftsführung
+        </h2>
+        <p class="mt-2">
+          {legal.managingDirectors.join(", ")} ({legal.representationNote})
+        </p>
+      </div>
+
+      <div>
+        <h2 class="font-heading text-xl font-semibold text-brown">
+          Unternehmensgegenstand
+        </h2>
+        <p class="mt-2">{legal.businessPurpose}</p>
+      </div>
+
+      <div>
+        <h2 class="font-heading text-xl font-semibold text-brown">
+          Gewerbebehörde
+        </h2>
+        <p class="mt-2">
+          {legal.tradeAuthority}<br />
+          GISA-Zahl (Betriebsstätte {site.address.street}): {legal.gisaNumber}
+        </p>
+      </div>
+
+      <div>
+        <h2 class="font-heading text-xl font-semibold text-brown">
+          Kammerzugehörigkeit
+        </h2>
+        <p class="mt-2">{legal.chamber}</p>
+      </div>
+
+      <div>
+        <h2 class="font-heading text-xl font-semibold text-brown">
+          Anwendbare Rechtsvorschriften
+        </h2>
+        <p class="mt-2">{legal.applicableLaw}</p>
+      </div>
+
+      <div>
+        <h2 class="font-heading text-xl font-semibold text-brown">Kontakt</h2>
+        <p class="mt-2">
+          Tel: {site.phone}<br />
+          E-Mail: {site.email}
+        </p>
+      </div>
     </div>
   </section>
 </BaseLayout>

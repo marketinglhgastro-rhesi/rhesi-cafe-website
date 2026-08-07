@@ -35,5 +35,25 @@
   "social": {
     "facebook": "https://www.facebook.com/rhesicafe",
     "instagram": "https://www.instagram.com/rhesilustenau/"
+  },
+  "legal": {
+    "companyName": "L&H Gastro GmbH",
+    "legalForm": "Gesellschaft mit beschränkter Haftung (GmbH)",
+    "registeredSeat": {
+      "street": "Kaiser Franz Josef Straße 2",
+      "postalCode": "6890",
+      "city": "Lustenau",
+      "country": "Österreich"
+    },
+    "companyRegisterNumber": "FN 285704d",
+    "companyRegisterCourt": "Landesgericht Feldkirch",
+    "vatId": "ATU62951728",
+    "managingDirectors": ["Jürgen Hochegger", "Marcel Lerch"],
+    "representationNote": "gemeinsam vertretungsberechtigt",
+    "businessPurpose": "Gastgewerbe",
+    "gisaNumber": "22972330",
+    "tradeAuthority": "Bezirkshauptmannschaft Dornbirn",
+    "chamber": "Wirtschaftskammer Vorarlberg, Fachgruppe Gastronomie",
+    "applicableLaw": "Gewerbeordnung 1994 (abrufbar unter www.ris.bka.gv.at)"
   }
 }
