@@ -1,6 +1,7 @@
 ---
 import TopBar from "./TopBar.astro";
 import CTAButton from "./CTAButton.astro";
+import rhesiLogoRaw from "../assets/logo/rhesi-logo.svg?raw";
 
 const navItems = [
   { label: "Startseite", href: "/" },
@@ -20,7 +21,13 @@ const isActive = (href: string) =>
 
   <div class="border-b border-brown/10 bg-white">
     <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-      <a href="/" class="font-heading text-2xl italic text-brown">Rhesi</a>
+      <a
+        href="/"
+        aria-label="Rhesi Café & Restaurant – Startseite"
+        class="logo-link block h-10 w-auto text-brown transition-opacity hover:opacity-80"
+      >
+        <Fragment set:html={rhesiLogoRaw} />
+      </a>
 
       <ul class="hidden items-center gap-8 text-sm font-medium text-espresso md:flex">
         {
@@ -98,3 +105,12 @@ const isActive = (href: string) =>
     toggle.setAttribute("aria-expanded", String(isOpen));
   });
 </script>
+
+<style>
+  .logo-link :global(svg) {
+    height: 100%;
+    width: auto;
+    display: block;
+    fill: currentColor;
+  }
+</style>
