@@ -12,15 +12,22 @@ interface CTA {
 interface Props {
   image: ImageMetadata;
   imageAlt: string;
+  imagePosition?: string;
   headline: string;
   subline?: string;
   ctas?: CTA[];
 }
 
-const { image, imageAlt, headline, subline, ctas = [] } = Astro.props;
+const {
+  image,
+  imageAlt,
+  imagePosition = "center",
+  headline,
+  subline,
+  ctas = [],
+} = Astro.props;
 ---
 
-<!-- TODO: Hero-Foto ist ein Unsplash-Platzhalter. Vor Launch durch ein eigenes Rhesi-Foto ersetzen. -->
 <section class="relative flex min-h-[60vh] items-center overflow-hidden md:min-h-[85vh]">
   <Image
     src={image}
@@ -31,6 +38,7 @@ const { image, imageAlt, headline, subline, ctas = [] } = Astro.props;
     quality={80}
     loading="eager"
     class="absolute inset-0 h-full w-full object-cover"
+    style={`object-position: ${imagePosition};`}
   />
 
   <div class="absolute inset-0 bg-espresso/20"></div>
