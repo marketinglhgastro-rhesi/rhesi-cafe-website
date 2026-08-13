@@ -1,5 +1,7 @@
 ---
+import { Image } from "astro:assets";
 import site from "../data/site.json";
+import gastgartenDetail from "../assets/images/gastgarten-detail.webp";
 
 const mapsUrl = `https://maps.google.com/?q=${encodeURIComponent(site.address.mapQuery)}`;
 ---
@@ -39,6 +41,17 @@ const mapsUrl = `https://maps.google.com/?q=${encodeURIComponent(site.address.ma
         Mittagsmenü: {site.lunchMenu.days}, {site.lunchMenu.hours}
       </p>
     </div>
+    <Image
+      src={gastgartenDetail}
+      alt="Gastgarten-Sitzbereich mit Blick auf den RHESI-Schriftzug am Fenster"
+      width={500}
+      height={375}
+      format="webp"
+      quality={80}
+      loading="lazy"
+      decoding="async"
+      class="h-40 w-full rounded-2xl object-cover"
+    />
   </div>
 
   <div
