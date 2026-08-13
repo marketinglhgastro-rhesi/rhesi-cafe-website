@@ -1,7 +1,7 @@
 ---
 import site from "../data/site.json";
 
-const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(site.address.mapQuery)}&output=embed`;
+const mapsUrl = `https://maps.google.com/?q=${encodeURIComponent(site.address.mapQuery)}`;
 ---
 
 <div class="grid gap-10 md:grid-cols-2">
@@ -41,13 +41,32 @@ const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(site.address.
     </div>
   </div>
 
-  <div data-reveal="right" class="min-h-[320px] overflow-hidden rounded-2xl ring-1 ring-brown/10">
-    <iframe
-      title={`Standort ${site.name}`}
-      src={mapSrc}
-      class="h-full min-h-[320px] w-full border-0"
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-    ></iframe>
+  <div
+    data-reveal="right"
+    class="flex min-h-[320px] flex-col items-center justify-center gap-4 rounded-2xl bg-cream p-8 text-center ring-1 ring-brown/10"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="h-10 w-10 text-terracotta-dark">
+      <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+      <circle cx="12" cy="10" r="3" />
+    </svg>
+    <div>
+      <p class="font-heading text-lg font-semibold text-brown">{site.name}</p>
+      <p class="mt-1 text-sm text-espresso/80">
+        {site.address.street}, {site.address.addressExtra}<br />
+        {site.address.postalCode} {site.address.city}
+      </p>
+    </div>
+    <a
+      href={mapsUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-flex items-center justify-center rounded-full border border-brown/40 px-6 py-3 text-sm font-semibold tracking-wide text-brown transition-colors duration-200 hover:border-brown hover:bg-brown hover:text-white"
+    >
+      In Google Maps öffnen
+    </a>
+    <p class="text-xs text-espresso/50">
+      Öffnet Google Maps in einem neuen Tab – es werden keine Daten an
+      Google übertragen, bevor Sie klicken.
+    </p>
   </div>
 </div>
