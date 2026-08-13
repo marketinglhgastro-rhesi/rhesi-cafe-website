@@ -2,14 +2,14 @@
   "_todo": "Wöchentlich aktualisieren, z. B. jeden Montag. Tag/Datum/Gericht in \"days\" für die neue Woche ersetzen. Diese Einträge (Woche vom 20.–25.7.) sind Beispieldaten nur zur Veranschaulichung des Formats.",
   "vegiGerichteDerWoche": [
     {
-      "name": "Hausgemachte Rösti",
-      "description": "Mit Gemüse und zwei Spiegeleiern",
-      "price": "€ 10,70"
+      "name": "Feines Risotto",
+      "description": "Mit frischen Pfifferlingen",
+      "price": "€ 10,90"
     },
     {
-      "name": "Griechischer Bauernsalat",
-      "description": "Mit Tomaten, Paprika, Gurken, roten Zwiebeln, Fetakäse",
-      "price": "€ 10,70"
+      "name": "Gebackener Blumenkohl",
+      "description": "Mit Pommes und Teufelssauce",
+      "price": "€ 10,90"
     }
   ],
   "supplement": {
@@ -19,37 +19,37 @@
   "days": [
     {
       "day": "Montag",
-      "date": "20.7.",
-      "dish": "Gegr. Schweinkarree mit Kroketten und Gemüse",
-      "price": "€ 10,70"
+      "date": "17.8.",
+      "dish": "„Rhesi-Grillteller“ mit Kroketten, Gemüse und Dip",
+      "price": "€ 10,90"
     },
     {
       "day": "Dienstag",
-      "date": "21.7.",
+      "date": "18.8.",
       "dish": "Wiener Schnitzel vom Schwein mit Pommes",
-      "price": "€ 10,70"
+      "price": "€ 10,90"
     },
     {
       "day": "Mittwoch",
-      "date": "22.7.",
-      "dish": "Champignon-Geschnetzeltes von der Pute mit Butterspätzle",
-      "price": "€ 10,70"
+      "date": "19.8.",
+      "dish": "Champignonrahmgeschnetzeltes von der Pute mit Erbsenreis",
+      "price": "€ 10,90"
     },
     {
       "day": "Donnerstag",
-      "date": "23.7.",
-      "dish": "Rhesi-Karreespieß mit Letschogemüse und Reis",
-      "price": "€ 10,70"
+      "date": "20.8.",
+      "dish": "Naturschnitzel an Bratensauce mit Speckbohnen und Kartoffelpüree",
+      "price": "€ 10,90"
     },
     {
       "day": "Freitag",
-      "date": "24.7.",
-      "dish": "Kässpätzle mit hausgemachtem Kartoffelsalat und Röstzwiebeln",
-      "price": "€ 10,70"
+      "date": "21.8.",
+      "dish": "Gebackenes Fischfilet mit hausg. Kartoffelsalat und Sauce Tartar",
+      "price": "€ 10,90"
     },
     {
       "day": "Samstag",
-      "date": "25.7.",
+      "date": "22.8.",
       "note": "Gerne verwöhnen wir Sie mit Speisen aus unserer normalen Karte!"
     }
   ]
