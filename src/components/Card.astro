@@ -10,6 +10,7 @@ interface Props {
   href?: string;
   linkLabel?: string;
   reveal?: "up" | "left" | "right";
+  class?: string;
 }
 
 const {
@@ -20,12 +21,13 @@ const {
   href,
   linkLabel = "Mehr erfahren",
   reveal,
+  class: className = "",
 } = Astro.props;
 ---
 
 <article
   data-reveal={reveal}
-  class="flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-brown/10"
+  class={`flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-brown/10 ${className}`}
 >
   {
     image && (

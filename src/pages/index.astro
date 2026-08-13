@@ -52,7 +52,7 @@ import gastgartenWeit from "../assets/images/gastgarten-weit.webp";
     <h2 class="font-heading text-center text-3xl font-semibold text-brown">
       Entdecken Sie Rhesi
     </h2>
-    <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+    <div class="mt-12 flex flex-wrap justify-center gap-8">
       <Card
         image={heroFruehstueck}
         imageAlt="Frühstückstisch mit frischem Obst und Pancakes bei Rhesi"
@@ -61,6 +61,7 @@ import gastgartenWeit from "../assets/images/gastgarten-weit.webp";
         href="/speisekarte"
         linkLabel="Zur Speisekarte"
         reveal="left"
+        class="w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.334rem)]"
       />
       <Card
         image={cardSpeisekarte}
@@ -70,6 +71,7 @@ import gastgartenWeit from "../assets/images/gastgarten-weit.webp";
         href="/speisekarte"
         linkLabel="Zur Speisekarte"
         reveal="up"
+        class="w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.334rem)]"
       />
       <Card
         image={cardKuchen}
@@ -79,6 +81,7 @@ import gastgartenWeit from "../assets/images/gastgarten-weit.webp";
         href="/speisekarte"
         linkLabel="Zur Speisekarte"
         reveal="right"
+        class="w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.334rem)]"
       />
       <Card
         image={gastgartenWeit}
@@ -88,6 +91,7 @@ import gastgartenWeit from "../assets/images/gastgarten-weit.webp";
         href="/kontakt"
         linkLabel="Anfahrt"
         reveal="left"
+        class="w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.334rem)]"
       />
       <Card
         image={cardMittagsmenue}
@@ -97,6 +101,7 @@ import gastgartenWeit from "../assets/images/gastgarten-weit.webp";
         href="/mittagsmenues"
         linkLabel="Zu den Mittagsmenüs"
         reveal="right"
+        class="w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.334rem)]"
       />
     </div>
   </section>
