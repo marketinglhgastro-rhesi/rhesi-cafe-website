@@ -2,7 +2,7 @@
   "_todo": "Wöchentlich aktualisieren, z. B. jeden Montag. Tag/Datum/Gericht in \"days\" für die neue Woche ersetzen. Diese Einträge (Woche vom 20.–25.7.) sind Beispieldaten nur zur Veranschaulichung des Formats.",
   "vegiGerichteDerWoche": [
     {
-      "name": Gebratenes Pfifferlinge ",
+      "name": "Gebratenes Pfifferlinge",
       "description": "Auf buntem Blattsalat an Himbeerdressing",
       "price": "€ 10,90"
     },
