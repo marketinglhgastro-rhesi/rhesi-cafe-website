@@ -2,13 +2,13 @@
   "_todo": "Wöchentlich aktualisieren, z. B. jeden Montag. Tag/Datum/Gericht in \"days\" für die neue Woche ersetzen. Diese Einträge (Woche vom 20.–25.7.) sind Beispieldaten nur zur Veranschaulichung des Formats.",
   "vegiGerichteDerWoche": [
     {
-      "name": "Feines Risotto",
-      "description": "Mit frischen Pfifferlingen",
+      "name": Gebratenes Pfifferlinge ",
+      "description": "Auf buntem Blattsalat an Himbeerdressing",
       "price": "€ 10,90"
     },
     {
-      "name": "Gebackener Blumenkohl",
-      "description": "Mit Pommes und Teufelssauce",
+      "name": "Zwei Spiegeleier",
+      "description": "Mit Bratkartoffeln und Spinat",
       "price": "€ 10,90"
     }
   ],
@@ -19,37 +19,37 @@
   "days": [
     {
       "day": "Montag",
-      "date": "17.8.",
-      "dish": "„Rhesi-Grillteller“ mit Kroketten, Gemüse und Dip",
+      "date": "24.8.",
+      "dish": "„Gebratenes Hühnerfilet an Paprikarahmsauce mit Tagliatelle",
       "price": "€ 10,90"
     },
     {
       "day": "Dienstag",
-      "date": "18.8.",
+      "date": "25.8.",
       "dish": "Wiener Schnitzel vom Schwein mit Pommes",
       "price": "€ 10,90"
     },
     {
       "day": "Mittwoch",
-      "date": "19.8.",
-      "dish": "Champignonrahmgeschnetzeltes von der Pute mit Erbsenreis",
+      "date": "26.8.",
+      "dish": "Schweinsfilet mit Pfifferlingsrahmsauce, Kroketten und Gemüse",
       "price": "€ 10,90"
     },
     {
       "day": "Donnerstag",
-      "date": "20.8.",
-      "dish": "Naturschnitzel an Bratensauce mit Speckbohnen und Kartoffelpüree",
+      "date": "27.8.",
+      "dish": "Karreespieß mit Kartoffelwedges und Teufelssauce",
       "price": "€ 10,90"
     },
     {
       "day": "Freitag",
-      "date": "21.8.",
-      "dish": "Gebackenes Fischfilet mit hausg. Kartoffelsalat und Sauce Tartar",
+      "date": "28.8.",
+      "dish": "Kässpätzle mit Röstzwiebeln und hausg. Kartoffelsalat",
       "price": "€ 10,90"
     },
     {
       "day": "Samstag",
-      "date": "22.8.",
+      "date": "29.8.",
       "note": "Gerne verwöhnen wir Sie mit Speisen aus unserer normalen Karte!"
     }
   ]
