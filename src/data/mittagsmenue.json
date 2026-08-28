@@ -2,13 +2,13 @@
   "_todo": "Wöchentlich aktualisieren, z. B. jeden Montag. Tag/Datum/Gericht in \"days\" für die neue Woche ersetzen. Diese Einträge (Woche vom 20.–25.7.) sind Beispieldaten nur zur Veranschaulichung des Formats.",
   "vegiGerichteDerWoche": [
     {
-      "name": "Gebratenes Pfifferlinge",
-      "description": "Auf buntem Blattsalat an Himbeerdressing",
+      "name": "Crêpe",
+      "description": "Gefüllt mit Gemüse und Cheddarkäse",
       "price": "€ 10,90"
     },
     {
-      "name": "Zwei Spiegeleier",
-      "description": "Mit Bratkartoffeln und Spinat",
+      "name": "Gnocchi",
+      "description": "An Basilikumpesto mit Feta und Tomaten",
       "price": "€ 10,90"
     }
   ],
@@ -19,37 +19,37 @@
   "days": [
     {
       "day": "Montag",
-      "date": "24.8.",
-      "dish": "„Gebratenes Hühnerfilet an Paprikarahmsauce mit Tagliatelle",
+      "date": "31.08.",
+      "dish": "„Grillteller mit Kartoffelwedges und buntem Gemüse",
       "price": "€ 10,90"
     },
     {
       "day": "Dienstag",
-      "date": "25.8.",
+      "date": "01.09.",
       "dish": "Wiener Schnitzel vom Schwein mit Pommes",
       "price": "€ 10,90"
     },
     {
       "day": "Mittwoch",
-      "date": "26.8.",
-      "dish": "Schweinsfilet mit Pfifferlingsrahmsauce, Kroketten und Gemüse",
+      "date": "02.09.",
+      "dish": "S-Steak an Jägersauce mit Butterspätzle",
       "price": "€ 10,90"
     },
     {
       "day": "Donnerstag",
-      "date": "27.8.",
-      "dish": "Karreespieß mit Kartoffelwedges und Teufelssauce",
+      "date": "03.09.",
+      "dish": "Piccata Milanese mit Tomaten-Spaghetti",
       "price": "€ 10,90"
     },
     {
       "day": "Freitag",
-      "date": "28.8.",
-      "dish": "Kässpätzle mit Röstzwiebeln und hausg. Kartoffelsalat",
+      "date": "04.09.",
+      "dish": "Hacklaibchen mit Petersilienkartoffeln und Karotten-Erbsen-Gemüse",
       "price": "€ 10,90"
     },
     {
       "day": "Samstag",
-      "date": "29.8.",
+      "date": "05.09.",
       "note": "Gerne verwöhnen wir Sie mit Speisen aus unserer normalen Karte!"
     }
   ]
