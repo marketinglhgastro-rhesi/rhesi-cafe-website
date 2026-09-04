@@ -2,13 +2,13 @@
   "_todo": "Wöchentlich aktualisieren, z. B. jeden Montag. Tag/Datum/Gericht in \"days\" für die neue Woche ersetzen. Diese Einträge (Woche vom 20.–25.7.) sind Beispieldaten nur zur Veranschaulichung des Formats.",
   "vegiGerichteDerWoche": [
     {
-      "name": "Crêpe",
-      "description": "Gefüllt mit Gemüse und Cheddarkäse",
+      "name": "Serviettenknödel",
+      "description": "mit Pfifferlingrahmsauce und Brokkoli-Röschen",
       "price": "€ 10,90"
     },
     {
-      "name": "Gnocchi",
-      "description": "An Basilikumpesto mit Feta und Tomaten",
+      "name": "Piccata",
+      "description": "von der Zucchini an Tomatensauce",
       "price": "€ 10,90"
     }
   ],
@@ -19,37 +19,37 @@
   "days": [
     {
       "day": "Montag",
-      "date": "31.08.",
-      "dish": "„Grillteller mit Kartoffelwedges und buntem Gemüse",
+      "date": "07.09.",
+      "dish": "Champignonrahmgeschnetzeltes vom Huhn mit Gemüsereis",
       "price": "€ 10,90"
     },
     {
       "day": "Dienstag",
-      "date": "01.09.",
+      "date": "08.09.",
       "dish": "Wiener Schnitzel vom Schwein mit Pommes",
       "price": "€ 10,90"
     },
     {
       "day": "Mittwoch",
-      "date": "02.09.",
-      "dish": "S-Steak an Jägersauce mit Butterspätzle",
+      "date": "09.09.",
+      "dish": "Rindsgulasch mit Knödel",
       "price": "€ 10,90"
     },
     {
       "day": "Donnerstag",
-      "date": "03.09.",
-      "dish": "Piccata Milanese mit Tomaten-Spaghetti",
+      "date": "10.09.",
+      "dish": "S-Filet an Pfefferrahmsauce mit Kroketten und Brokkoli",
       "price": "€ 10,90"
     },
     {
       "day": "Freitag",
-      "date": "04.09.",
-      "dish": "Hacklaibchen mit Petersilienkartoffeln und Karotten-Erbsen-Gemüse",
+      "date": "11.09.",
+      "dish": "Pariser Schnitzel vom Huhn mit Rahm-Kohlrabi und Salzkartoffeln",
       "price": "€ 10,90"
     },
     {
       "day": "Samstag",
-      "date": "05.09.",
+      "date": "12.09.",
       "note": "Gerne verwöhnen wir Sie mit Speisen aus unserer normalen Karte!"
     }
   ]
