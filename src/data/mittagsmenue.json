@@ -2,13 +2,13 @@
   "_todo": "Wöchentlich aktualisieren, z. B. jeden Montag. Tag/Datum/Gericht in \"days\" für die neue Woche ersetzen. Diese Einträge (Woche vom 20.–25.7.) sind Beispieldaten nur zur Veranschaulichung des Formats.",
   "vegiGerichteDerWoche": [
     {
-      "name": "Gebackene Champignons",
-      "description": "mit Sauce Tartar und gem. Salat",
+      "name": "Cremiges Pfifferlings-Risotto",
+      "description": "mit Parmesanflocken und Rucola",
       "price": "€ 10,90"
     },
     {
-      "name": "Tortellini",
-      "description": "an Brokkoli-Rahmsauce",
+      "name": "Zwei Spiegeleier",
+      "description": "mit Bratkartoffeln und Spinat",
       "price": "€ 10,90"
     }
   ],
@@ -19,37 +19,37 @@
   "days": [
     {
       "day": "Montag",
-      "date": "14.09.",
-      "dish": "Steak „Hawaii“ mit Kartoffelwedges und Teufelssauce",
+      "date": "21.09.",
+      "dish": "Grillteller mit Speckbohnen, Kroketten und Dip",
       "price": "€ 10,90"
     },
     {
       "day": "Dienstag",
-      "date": "15.09.",
+      "date": "22.09.",
       "dish": "Wiener Schnitzel vom Schwein mit Pommes",
       "price": "€ 10,90"
     },
     {
       "day": "Mittwoch",
-      "date": "16.09.",
-      "dish": "Hühnerfilet an Pifferlingsrahmsauce mit Spätzle und Gemüse",
+      "date": "23.09.",
+      "dish": "Gegrilltes Hühnerfilet mit Tagliatelle und Brokkoli an Paprikarahmsauce",
       "price": "€ 10,90"
     },
     {
       "day": "Donnerstag",
-      "date": "17.09.",
-      "dish": "Schweinebraten mit Sauerkraut und Knödel",
+      "date": "24.09.",
+      "dish": "Karreesteak mit Reis, Gemüse und Rahmsauce",
       "price": "€ 10,90"
     },
     {
       "day": "Freitag",
-      "date": "18.09.",
-      "dish": "Cordon bleu mit hausgemachtem Kartoffelsalat",
+      "date": "25.09.",
+      "dish": "Fischfilet im Kartoffelmantel mit Gemüse und Senfsauce",
       "price": "€ 10,90"
     },
     {
       "day": "Samstag",
-      "date": "19.09.",
+      "date": "26.09.",
       "note": "Gerne verwöhnen wir Sie mit Speisen aus unserer normalen Karte!"
     }
   ]
