@@ -2,13 +2,13 @@
   "_todo": "Wöchentlich aktualisieren, z. B. jeden Montag. Tag/Datum/Gericht in \"days\" für die neue Woche ersetzen. Diese Einträge (Woche vom 20.–25.7.) sind Beispieldaten nur zur Veranschaulichung des Formats.",
   "vegiGerichteDerWoche": [
     {
-      "name": "Cremiges Pfifferlings-Risotto",
-      "description": "mit Parmesanflocken und Rucola",
+      "name": "Spätzlepfanne",
+      "description": "mit Gemüse an Sahnesauce",
       "price": "€ 10,90"
     },
     {
-      "name": "Zwei Spiegeleier",
-      "description": "mit Bratkartoffeln und Spinat",
+      "name": "Spaghetti",
+      "description": "an Tomatensauce mit Auberginen und Parmesan",
       "price": "€ 10,90"
     }
   ],
@@ -19,37 +19,37 @@
   "days": [
     {
       "day": "Montag",
-      "date": "21.09.",
-      "dish": "Grillteller mit Speckbohnen, Kroketten und Dip",
+      "date": "28.09.",
+      "dish": "S-Filet an Pfefferrahmsauce mit Kroketten und Gemüse",
       "price": "€ 10,90"
     },
     {
       "day": "Dienstag",
-      "date": "22.09.",
+      "date": "29.09.",
       "dish": "Wiener Schnitzel vom Schwein mit Pommes",
       "price": "€ 10,90"
     },
     {
       "day": "Mittwoch",
-      "date": "23.09.",
-      "dish": "Gegrilltes Hühnerfilet mit Tagliatelle und Brokkoli an Paprikarahmsauce",
+      "date": "30.09.",
+      "dish": "Piccata Milanese vom Huhn mit Tomaten-Spaghetti",
       "price": "€ 10,90"
     },
     {
       "day": "Donnerstag",
-      "date": "24.09.",
-      "dish": "Karreesteak mit Reis, Gemüse und Rahmsauce",
+      "date": "01.10.",
+      "dish": "Hackbraten mit Erbsenreis und Bratensauce",
       "price": "€ 10,90"
     },
     {
       "day": "Freitag",
-      "date": "25.09.",
-      "dish": "Fischfilet im Kartoffelmantel mit Gemüse und Senfsauce",
+      "date": "02.10.",
+      "dish": "Kässpätzle mit Röstzwiebeln und hausgemachtem Kartoffelsalat",
       "price": "€ 10,90"
     },
     {
       "day": "Samstag",
-      "date": "26.09.",
+      "date": "03.10.",
       "note": "Gerne verwöhnen wir Sie mit Speisen aus unserer normalen Karte!"
     }
   ]
