@@ -2,13 +2,13 @@
   "_todo": "Wöchentlich aktualisieren, z. B. jeden Montag. Tag/Datum/Gericht in \"days\" für die neue Woche ersetzen. Diese Einträge (Woche vom 20.–25.7.) sind Beispieldaten nur zur Veranschaulichung des Formats.",
   "vegiGerichteDerWoche": [
     {
-      "name": "Spätzlepfanne",
-      "description": "mit Gemüse an Sahnesauce",
+      "name": "Gemüselasagne",
+      "description": " ",
       "price": "€ 10,90"
     },
     {
-      "name": "Spaghetti",
-      "description": "an Tomatensauce mit Auberginen und Parmesan",
+      "name": "Krautspätzle",
+      "description": " ",
       "price": "€ 10,90"
     }
   ],
@@ -19,37 +19,37 @@
   "days": [
     {
       "day": "Montag",
-      "date": "28.09.",
-      "dish": "S-Filet an Pfefferrahmsauce mit Kroketten und Gemüse",
+      "date": "05.10.",
+      "dish": "Champignonrahmgeschnetzeltes vom Huhn mit Nudeln und Gemüse",
       "price": "€ 10,90"
     },
     {
       "day": "Dienstag",
-      "date": "29.09.",
+      "date": "06.10.",
       "dish": "Wiener Schnitzel vom Schwein mit Pommes",
       "price": "€ 10,90"
     },
     {
       "day": "Mittwoch",
-      "date": "30.09.",
-      "dish": "Piccata Milanese vom Huhn mit Tomaten-Spaghetti",
+      "date": "07.10.",
+      "dish": "Rindsgulasch mit Butterspätzle",
       "price": "€ 10,90"
     },
     {
       "day": "Donnerstag",
-      "date": "01.10.",
-      "dish": "Hackbraten mit Erbsenreis und Bratensauce",
+      "date": "08.10.",
+      "dish": "Rhesi-Hausspieß mit Kartoffelwedges und Zwiebelsauce",
       "price": "€ 10,90"
     },
     {
       "day": "Freitag",
-      "date": "02.10.",
-      "dish": "Kässpätzle mit Röstzwiebeln und hausgemachtem Kartoffelsalat",
+      "date": "09.10.",
+      "dish": "Hacklaibchen mit Püree und Karotten-Erbsengemüse",
       "price": "€ 10,90"
     },
     {
       "day": "Samstag",
-      "date": "03.10.",
+      "date": "10.10.",
       "note": "Gerne verwöhnen wir Sie mit Speisen aus unserer normalen Karte!"
     }
   ]
