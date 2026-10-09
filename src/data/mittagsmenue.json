@@ -2,13 +2,13 @@
   "_todo": "Wöchentlich aktualisieren, z. B. jeden Montag. Tag/Datum/Gericht in \"days\" für die neue Woche ersetzen. Diese Einträge (Woche vom 20.–25.7.) sind Beispieldaten nur zur Veranschaulichung des Formats.",
   "vegiGerichteDerWoche": [
     {
-      "name": "Gemüselasagne",
-      "description": " ",
+      "name": "Gebackener Blumenkohl",
+      "description": "mit Pommes und Teufelssauce",
       "price": "€ 10,90"
     },
     {
-      "name": "Krautspätzle",
-      "description": " ",
+      "name": "Gnocchi",
+      "description": "mit Fetakäse, Cherrytomaten an Basilikumpesto",
       "price": "€ 10,90"
     }
   ],
@@ -19,37 +19,37 @@
   "days": [
     {
       "day": "Montag",
-      "date": "05.10.",
-      "dish": "Champignonrahmgeschnetzeltes vom Huhn mit Nudeln und Gemüse",
+      "date": "12.10.",
+      "dish": "Schweinesteak mit Kroketten, Gemüse und Rahmsauce",
       "price": "€ 10,90"
     },
     {
       "day": "Dienstag",
-      "date": "06.10.",
+      "date": "13.10.",
       "dish": "Wiener Schnitzel vom Schwein mit Pommes",
       "price": "€ 10,90"
     },
     {
       "day": "Mittwoch",
-      "date": "07.10.",
-      "dish": "Rindsgulasch mit Butterspätzle",
+      "date": "14.10.",
+      "dish": "Schweinebraten mit Kraut und Knödel",
       "price": "€ 10,90"
     },
     {
       "day": "Donnerstag",
-      "date": "08.10.",
-      "dish": "Rhesi-Hausspieß mit Kartoffelwedges und Zwiebelsauce",
+      "date": "15.10.",
+      "dish": "Gebratenes Hühnerfilet mit Tagliatelle, Brokkoli und Paprikarahmsauce",
       "price": "€ 10,90"
     },
     {
       "day": "Freitag",
-      "date": "09.10.",
-      "dish": "Hacklaibchen mit Püree und Karotten-Erbsengemüse",
+      "date": "16.10.",
+      "dish": "Kässpätzle mit Röstzwiebeln und hausgemachtem Kartoffelsalat",
       "price": "€ 10,90"
     },
     {
       "day": "Samstag",
-      "date": "10.10.",
+      "date": "17.10.",
       "note": "Gerne verwöhnen wir Sie mit Speisen aus unserer normalen Karte!"
     }
   ]
