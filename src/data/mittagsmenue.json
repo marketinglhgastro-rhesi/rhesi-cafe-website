@@ -2,13 +2,13 @@
   "_todo": "Wöchentlich aktualisieren, z. B. jeden Montag. Tag/Datum/Gericht in \"days\" für die neue Woche ersetzen. Diese Einträge (Woche vom 20.–25.7.) sind Beispieldaten nur zur Veranschaulichung des Formats.",
   "vegiGerichteDerWoche": [
     {
-      "name": "Bratkartoffeln",
-      "description": "mit Spiegelei und Cremespinat",
+      "name": "Piccata",
+      "description": "von der Zucchini und Melanzanie auf Tomaten-Spaghetti",
       "price": "€ 10,90"
     },
     {
-      "name": "Gemüsecurry",
-      "description": "mit Reis",
+      "name": "Pilzragout",
+      "description": "mit Knödel und Blaukraut",
       "price": "€ 10,90"
     }
   ],
@@ -19,37 +19,37 @@
   "days": [
     {
       "day": "Montag",
-      "date": "22.10.",
-      "dish": "Grillteller mit Kartoffelwedges du Dip",
-      "price": "€ 10,90"
+      "date": "26.10.",
+      "dish": "Feiertag, besuchen Sie uns gerne im Restaurant Schmugglar am Kirchplatz",
+      "price": ""
     },
     {
       "day": "Dienstag",
-      "date": "20.10.",
+      "date": "27.10.",
       "dish": "Wiener Schnitzel vom Schwein mit Pommes",
       "price": "€ 10,90"
     },
     {
       "day": "Mittwoch",
-      "date": "21.10.",
-      "dish": "Schweinesteak mit Speckbohnen, Bratensauce, Kroketten und Gemüse",
+      "date": "28.10.",
+      "dish": "Piccata Milanese mit Spaghetti an Tomatensauce",
       "price": "€ 10,90"
     },
     {
       "day": "Donnerstag",
-      "date": "22.10.",
-      "dish": "Virgler Bratwurst mit warmer Zwiebelsauce und Kartoffelpüree",
+      "date": "29.10.",
+      "dish": "Champignonrahmgeschnetzeltes von der Pute mit Gemüsereis",
       "price": "€ 10,90"
     },
     {
       "day": "Freitag",
-      "date": "23.10.",
-      "dish": "Seehechtfilet im Kartoffelkruste auf Gemüse und Senfsauce",
+      "date": "30.10.",
+      "dish": "Schweinsfilet an Pfefferrahmsauce mit Kroketten und Gemüse",
       "price": "€ 10,90"
     },
     {
       "day": "Samstag",
-      "date": "24.10.",
+      "date": "31.10.",
       "note": "Gerne verwöhnen wir Sie mit Speisen aus unserer normalen Karte!"
     }
   ]
